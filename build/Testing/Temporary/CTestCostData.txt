@@ -1,0 +1,2 @@
+lru_k_replacer_benchmark 1 2.00421
+---
