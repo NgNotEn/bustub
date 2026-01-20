@@ -11,16 +11,14 @@ the replacer evicts the frame with the earliest overall timestamp
 (i.e., the frame whose least-recent recorded access is the overall least recent access).
 */
 
-#include <array>
 #include <cstddef>
-#include <cstdint>
 #include <limits>
 #include <queue>
 #include <mutex>
 #include <unordered_map>
-#include "../../common/exception.h"
-#include "../../common/config.h"
-#include "../../common/macros.h"
+#include "common/exception.h"
+#include "common/config.h"
+#include "common/macros.h"
 
 
 
@@ -33,10 +31,10 @@ namespace bustub {
         DISALLOW_COPY_AND_MOVE(LRUKReplacer);
 
         auto Evict(frame_id_t*) -> bool;    // try to evict frame
-        void RecordAccess(frame_id_t);      // recorde a access of the frame
-        void SetEvictable(frame_id_t, bool);// set the frame's status
-        void Remove(frame_id_t);            // remove the frame what ever 
-        size_t Size();                      // return the size of is_evictable frames
+        auto RecordAccess(frame_id_t) -> void;      // recorde a access of the frame
+        auto SetEvictable(frame_id_t, bool) -> void;// set the frame's status
+        auto Remove(frame_id_t) -> void;            // remove the frame what ever 
+        auto Size() -> std::size_t;                      // return the size of is_evictable frames
 
     private:
         struct LRUKNode_{

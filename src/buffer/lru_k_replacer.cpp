@@ -1,11 +1,7 @@
-#include "../include/buffer/lru_k_replacer.h"
+#include "buffer/lru_k_replacer.h"
 #include <cstddef>
 #include <cstring>
 #include <mutex>
-
-
-
-
 
 namespace bustub {
     // default constructor
@@ -14,7 +10,7 @@ namespace bustub {
 
 
     // record a access
-    void LRUKReplacer::RecordAccess(frame_id_t frame_id){
+    auto LRUKReplacer::RecordAccess(frame_id_t frame_id) -> void {
         if(frame_id >= num_frames_) throw Exception(ExceptionType::OUT_OF_RANGE, "Frame ID out of range.");
 
         std::lock_guard<std::mutex> lock(latch_);
@@ -28,7 +24,7 @@ namespace bustub {
         it->second.update(cur_timestamp_++);
     }
 
-    bool LRUKReplacer::Evict(frame_id_t* frame_id){
+    auto LRUKReplacer::Evict(frame_id_t* frame_id) -> bool{
         std::lock_guard<std::mutex> lock(latch_);
 
         // skip empty
@@ -69,7 +65,7 @@ namespace bustub {
     }
 
 
-    void LRUKReplacer::SetEvictable(frame_id_t frame_id, bool set_evictable){
+    auto LRUKReplacer::SetEvictable(frame_id_t frame_id, bool set_evictable) ->void {
         if(frame_id >= num_frames_) throw Exception(ExceptionType::OUT_OF_RANGE, "Frame ID out of range.");
 
         std::lock_guard<std::mutex> lock(latch_);
@@ -87,7 +83,7 @@ namespace bustub {
     }
 
 
-    void LRUKReplacer::Remove(frame_id_t frame_id) {
+    auto LRUKReplacer::Remove(frame_id_t frame_id) -> void {
         if(frame_id >= num_frames_) throw Exception(ExceptionType::OUT_OF_RANGE, "Frame ID out of range.");
         std::lock_guard<std::mutex> lock(latch_);
         auto it = frames_.find(frame_id);

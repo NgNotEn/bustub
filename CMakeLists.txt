@@ -1,5 +1,6 @@
 # 定 CMake 最低版本要求
 cmake_minimum_required(VERSION 3.16)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # 定项目名称和语言
 project(bustub LANGUAGES CXX)

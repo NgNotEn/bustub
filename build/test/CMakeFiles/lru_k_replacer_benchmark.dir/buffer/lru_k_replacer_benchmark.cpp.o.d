@@ -215,7 +215,7 @@ test/CMakeFiles/lru_k_replacer_benchmark.dir/buffer/lru_k_replacer_benchmark.cpp
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/bits/node_handle.h \
  /usr/include/c++/13/bits/erase_if.h \
- /home/wjq/workplace/code/bustub/test/buffer/../../src/include/buffer/../../common/exception.h \
+ /home/wjq/workplace/code/bustub/src/include/common/exception.h \
  /usr/include/c++/13/memory \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
  /usr/include/c++/13/bits/align.h /usr/include/c++/13/bits/shared_ptr.h \
@@ -225,5 +225,5 @@ test/CMakeFiles/lru_k_replacer_benchmark.dir/buffer/lru_k_replacer_benchmark.cpp
  /usr/include/c++/13/bits/shared_ptr_atomic.h \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
- /home/wjq/workplace/code/bustub/test/buffer/../../src/include/buffer/../../common/config.h \
- /home/wjq/workplace/code/bustub/test/buffer/../../src/include/buffer/../../common/macros.h
+ /home/wjq/workplace/code/bustub/src/include/common/config.h \
+ /home/wjq/workplace/code/bustub/src/include/common/macros.h

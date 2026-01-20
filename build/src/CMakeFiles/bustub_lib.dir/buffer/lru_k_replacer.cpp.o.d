@@ -1,7 +1,7 @@
 src/CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.o: \
  /home/wjq/workplace/code/bustub/src/buffer/lru_k_replacer.cpp \
  /usr/include/stdc-predef.h \
- /home/wjq/workplace/code/bustub/src/buffer/../include/buffer/lru_k_replacer.h \
+ /home/wjq/workplace/code/bustub/src/include/buffer/lru_k_replacer.h \
  /usr/include/c++/13/array /usr/include/c++/13/compare \
  /usr/include/c++/13/initializer_list \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -122,7 +122,7 @@ src/CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.o: \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/bits/node_handle.h \
  /usr/include/c++/13/bits/erase_if.h \
- /home/wjq/workplace/code/bustub/src/buffer/../include/buffer/../../common/exception.h \
+ /home/wjq/workplace/code/bustub/src/include/common/exception.h \
  /usr/include/c++/13/cstdio /usr/include/stdio.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -191,8 +191,8 @@ src/CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.o: \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /home/wjq/workplace/code/bustub/src/buffer/../include/buffer/../../common/config.h \
+ /home/wjq/workplace/code/bustub/src/include/common/config.h \
  /usr/include/c++/13/atomic /usr/include/c++/13/chrono \
- /home/wjq/workplace/code/bustub/src/buffer/../include/buffer/../../common/macros.h \
+ /home/wjq/workplace/code/bustub/src/include/common/macros.h \
  /usr/include/c++/13/cassert /usr/include/assert.h \
  /usr/include/c++/13/cstring /usr/include/string.h /usr/include/strings.h

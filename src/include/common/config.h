@@ -22,6 +22,7 @@ using txn_id_t = int32_t;
 // (Log Sequence Number)
 using lsn_t = int32_t;
 
+
 // ==========================================
 //  const value define
 // ==========================================
