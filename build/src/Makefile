@@ -185,6 +185,30 @@ bustub_lib/fast:
 	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/build
 .PHONY : bustub_lib/fast
 
+buffer/buffer_pool_manager.o: buffer/buffer_pool_manager.cpp.o
+.PHONY : buffer/buffer_pool_manager.o
+
+# target to build an object file
+buffer/buffer_pool_manager.cpp.o:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o
+.PHONY : buffer/buffer_pool_manager.cpp.o
+
+buffer/buffer_pool_manager.i: buffer/buffer_pool_manager.cpp.i
+.PHONY : buffer/buffer_pool_manager.i
+
+# target to preprocess a source file
+buffer/buffer_pool_manager.cpp.i:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.i
+.PHONY : buffer/buffer_pool_manager.cpp.i
+
+buffer/buffer_pool_manager.s: buffer/buffer_pool_manager.cpp.s
+.PHONY : buffer/buffer_pool_manager.s
+
+# target to generate assembly for a file
+buffer/buffer_pool_manager.cpp.s:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.s
+.PHONY : buffer/buffer_pool_manager.cpp.s
+
 buffer/lru_k_replacer.o: buffer/lru_k_replacer.cpp.o
 .PHONY : buffer/lru_k_replacer.o
 
@@ -209,6 +233,54 @@ buffer/lru_k_replacer.cpp.s:
 	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.s
 .PHONY : buffer/lru_k_replacer.cpp.s
 
+storage/disk/disk_manager.o: storage/disk/disk_manager.cpp.o
+.PHONY : storage/disk/disk_manager.o
+
+# target to build an object file
+storage/disk/disk_manager.cpp.o:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o
+.PHONY : storage/disk/disk_manager.cpp.o
+
+storage/disk/disk_manager.i: storage/disk/disk_manager.cpp.i
+.PHONY : storage/disk/disk_manager.i
+
+# target to preprocess a source file
+storage/disk/disk_manager.cpp.i:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.i
+.PHONY : storage/disk/disk_manager.cpp.i
+
+storage/disk/disk_manager.s: storage/disk/disk_manager.cpp.s
+.PHONY : storage/disk/disk_manager.s
+
+# target to generate assembly for a file
+storage/disk/disk_manager.cpp.s:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.s
+.PHONY : storage/disk/disk_manager.cpp.s
+
+storage/disk/disk_scheduler.o: storage/disk/disk_scheduler.cpp.o
+.PHONY : storage/disk/disk_scheduler.o
+
+# target to build an object file
+storage/disk/disk_scheduler.cpp.o:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o
+.PHONY : storage/disk/disk_scheduler.cpp.o
+
+storage/disk/disk_scheduler.i: storage/disk/disk_scheduler.cpp.i
+.PHONY : storage/disk/disk_scheduler.i
+
+# target to preprocess a source file
+storage/disk/disk_scheduler.cpp.i:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.i
+.PHONY : storage/disk/disk_scheduler.cpp.i
+
+storage/disk/disk_scheduler.s: storage/disk/disk_scheduler.cpp.s
+.PHONY : storage/disk/disk_scheduler.s
+
+# target to generate assembly for a file
+storage/disk/disk_scheduler.cpp.s:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.s
+.PHONY : storage/disk/disk_scheduler.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -223,9 +295,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... bustub_lib"
+	@echo "... buffer/buffer_pool_manager.o"
+	@echo "... buffer/buffer_pool_manager.i"
+	@echo "... buffer/buffer_pool_manager.s"
 	@echo "... buffer/lru_k_replacer.o"
 	@echo "... buffer/lru_k_replacer.i"
 	@echo "... buffer/lru_k_replacer.s"
+	@echo "... storage/disk/disk_manager.o"
+	@echo "... storage/disk/disk_manager.i"
+	@echo "... storage/disk/disk_manager.s"
+	@echo "... storage/disk/disk_scheduler.o"
+	@echo "... storage/disk/disk_scheduler.i"
+	@echo "... storage/disk/disk_scheduler.s"
 .PHONY : help
 
 

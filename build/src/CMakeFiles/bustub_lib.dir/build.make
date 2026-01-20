@@ -83,17 +83,65 @@ src/CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.s"
 	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wjq/workplace/code/bustub/src/buffer/lru_k_replacer.cpp -o CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.s
 
+src/CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o: src/CMakeFiles/bustub_lib.dir/flags.make
+src/CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o: /home/wjq/workplace/code/bustub/src/storage/disk/disk_manager.cpp
+src/CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o: src/CMakeFiles/bustub_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wjq/workplace/code/bustub/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o -MF CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o.d -o CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o -c /home/wjq/workplace/code/bustub/src/storage/disk/disk_manager.cpp
+
+src/CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.i"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wjq/workplace/code/bustub/src/storage/disk/disk_manager.cpp > CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.i
+
+src/CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.s"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wjq/workplace/code/bustub/src/storage/disk/disk_manager.cpp -o CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.s
+
+src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o: src/CMakeFiles/bustub_lib.dir/flags.make
+src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o: /home/wjq/workplace/code/bustub/src/storage/disk/disk_scheduler.cpp
+src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o: src/CMakeFiles/bustub_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wjq/workplace/code/bustub/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o -MF CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o.d -o CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o -c /home/wjq/workplace/code/bustub/src/storage/disk/disk_scheduler.cpp
+
+src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.i"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wjq/workplace/code/bustub/src/storage/disk/disk_scheduler.cpp > CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.i
+
+src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.s"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wjq/workplace/code/bustub/src/storage/disk/disk_scheduler.cpp -o CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.s
+
+src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o: src/CMakeFiles/bustub_lib.dir/flags.make
+src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o: /home/wjq/workplace/code/bustub/src/buffer/buffer_pool_manager.cpp
+src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o: src/CMakeFiles/bustub_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wjq/workplace/code/bustub/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o -MF CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o.d -o CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o -c /home/wjq/workplace/code/bustub/src/buffer/buffer_pool_manager.cpp
+
+src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.i"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wjq/workplace/code/bustub/src/buffer/buffer_pool_manager.cpp > CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.i
+
+src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.s"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wjq/workplace/code/bustub/src/buffer/buffer_pool_manager.cpp -o CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.s
+
 # Object files for target bustub_lib
 bustub_lib_OBJECTS = \
-"CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.o"
+"CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.o" \
+"CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o" \
+"CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o" \
+"CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o"
 
 # External object files for target bustub_lib
 bustub_lib_EXTERNAL_OBJECTS =
 
 lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.o
+lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o
+lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o
+lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o
 lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/build.make
 lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/wjq/workplace/code/bustub/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library ../lib/libbustub_lib.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/wjq/workplace/code/bustub/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library ../lib/libbustub_lib.so"
 	cd /home/wjq/workplace/code/bustub/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bustub_lib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -249,6 +249,32 @@ lru_k_replacer_benchmark/fast:
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/lru_k_replacer_benchmark.dir/build.make test/CMakeFiles/lru_k_replacer_benchmark.dir/build
 .PHONY : lru_k_replacer_benchmark/fast
 
+#=============================================================================
+# Target rules for targets named disk_scheduler_benchmark
+
+# Build rule for target.
+disk_scheduler_benchmark: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 disk_scheduler_benchmark
+.PHONY : disk_scheduler_benchmark
+
+# fast build rule for target.
+disk_scheduler_benchmark/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/disk_scheduler_benchmark.dir/build.make test/CMakeFiles/disk_scheduler_benchmark.dir/build
+.PHONY : disk_scheduler_benchmark/fast
+
+#=============================================================================
+# Target rules for targets named buffer_pool_benchmark
+
+# Build rule for target.
+buffer_pool_benchmark: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 buffer_pool_benchmark
+.PHONY : buffer_pool_benchmark
+
+# fast build rule for target.
+buffer_pool_benchmark/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/buffer_pool_benchmark.dir/build.make test/CMakeFiles/buffer_pool_benchmark.dir/build
+.PHONY : buffer_pool_benchmark/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -262,7 +288,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... buffer_pool_benchmark"
 	@echo "... bustub_lib"
+	@echo "... disk_scheduler_benchmark"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"

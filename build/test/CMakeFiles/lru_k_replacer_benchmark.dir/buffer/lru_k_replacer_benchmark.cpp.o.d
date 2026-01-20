@@ -204,7 +204,6 @@ test/CMakeFiles/lru_k_replacer_benchmark.dir/buffer/lru_k_replacer_benchmark.cpp
  /usr/include/c++/13/bits/std_mutex.h \
  /usr/include/c++/13/bits/unique_lock.h /usr/include/c++/13/chrono \
  /home/wjq/workplace/code/bustub/test/buffer/../../src/include/buffer/lru_k_replacer.h \
- /usr/include/c++/13/array /usr/include/c++/13/compare \
  /usr/include/c++/13/queue /usr/include/c++/13/deque \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
  /usr/include/c++/13/bits/stl_queue.h /usr/include/c++/13/unordered_map \

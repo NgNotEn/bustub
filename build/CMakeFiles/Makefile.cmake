@@ -90,4 +90,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "src/CMakeFiles/bustub_lib.dir/DependInfo.cmake"
   "test/CMakeFiles/lru_k_replacer_benchmark.dir/DependInfo.cmake"
+  "test/CMakeFiles/disk_scheduler_benchmark.dir/DependInfo.cmake"
+  "test/CMakeFiles/buffer_pool_benchmark.dir/DependInfo.cmake"
   )

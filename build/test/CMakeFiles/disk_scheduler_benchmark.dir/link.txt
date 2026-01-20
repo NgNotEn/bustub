@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/disk_scheduler_benchmark.dir/storage/disk/disk_scheduler_benchmark.cpp.o -o ../bin/disk_scheduler_benchmark  -Wl,-rpath,/home/wjq/workplace/code/bustub/build/lib ../lib/libbustub_lib.so ../lib/libgtest_main.a ../lib/libgtest.a -lpthread 

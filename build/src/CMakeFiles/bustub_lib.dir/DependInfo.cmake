@@ -8,7 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/wjq/workplace/code/bustub/src/buffer/buffer_pool_manager.cpp" "src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o" "gcc" "src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o.d"
   "/home/wjq/workplace/code/bustub/src/buffer/lru_k_replacer.cpp" "src/CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.o" "gcc" "src/CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.o.d"
+  "/home/wjq/workplace/code/bustub/src/storage/disk/disk_manager.cpp" "src/CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o" "gcc" "src/CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o.d"
+  "/home/wjq/workplace/code/bustub/src/storage/disk/disk_scheduler.cpp" "src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o" "gcc" "src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

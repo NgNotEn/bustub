@@ -30,9 +30,39 @@
   "output": "src/CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.o"
 },
 {
+  "directory": "/home/wjq/workplace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workplace/code/bustub/src/include -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o -c /home/wjq/workplace/code/bustub/src/storage/disk/disk_manager.cpp",
+  "file": "/home/wjq/workplace/code/bustub/src/storage/disk/disk_manager.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o"
+},
+{
+  "directory": "/home/wjq/workplace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workplace/code/bustub/src/include -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o -c /home/wjq/workplace/code/bustub/src/storage/disk/disk_scheduler.cpp",
+  "file": "/home/wjq/workplace/code/bustub/src/storage/disk/disk_scheduler.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o"
+},
+{
+  "directory": "/home/wjq/workplace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workplace/code/bustub/src/include -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o -c /home/wjq/workplace/code/bustub/src/buffer/buffer_pool_manager.cpp",
+  "file": "/home/wjq/workplace/code/bustub/src/buffer/buffer_pool_manager.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o"
+},
+{
   "directory": "/home/wjq/workplace/code/bustub/build/test",
   "command": "/usr/bin/c++  -I/home/wjq/workplace/code/bustub/src/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/lru_k_replacer_benchmark.dir/buffer/lru_k_replacer_benchmark.cpp.o -c /home/wjq/workplace/code/bustub/test/buffer/lru_k_replacer_benchmark.cpp",
   "file": "/home/wjq/workplace/code/bustub/test/buffer/lru_k_replacer_benchmark.cpp",
   "output": "test/CMakeFiles/lru_k_replacer_benchmark.dir/buffer/lru_k_replacer_benchmark.cpp.o"
+},
+{
+  "directory": "/home/wjq/workplace/code/bustub/build/test",
+  "command": "/usr/bin/c++  -I/home/wjq/workplace/code/bustub/src/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/disk_scheduler_benchmark.dir/storage/disk/disk_scheduler_benchmark.cpp.o -c /home/wjq/workplace/code/bustub/test/storage/disk/disk_scheduler_benchmark.cpp",
+  "file": "/home/wjq/workplace/code/bustub/test/storage/disk/disk_scheduler_benchmark.cpp",
+  "output": "test/CMakeFiles/disk_scheduler_benchmark.dir/storage/disk/disk_scheduler_benchmark.cpp.o"
+},
+{
+  "directory": "/home/wjq/workplace/code/bustub/build/test",
+  "command": "/usr/bin/c++  -I/home/wjq/workplace/code/bustub/src/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/buffer_pool_benchmark.dir/buffer/buffer_pool_benchmark.cpp.o -c /home/wjq/workplace/code/bustub/test/buffer/buffer_pool_benchmark.cpp",
+  "file": "/home/wjq/workplace/code/bustub/test/buffer/buffer_pool_benchmark.cpp",
+  "output": "test/CMakeFiles/buffer_pool_benchmark.dir/buffer/buffer_pool_benchmark.cpp.o"
 }
 ]
