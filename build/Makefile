@@ -275,6 +275,19 @@ buffer_pool_benchmark/fast:
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/buffer_pool_benchmark.dir/build.make test/CMakeFiles/buffer_pool_benchmark.dir/build
 .PHONY : buffer_pool_benchmark/fast
 
+#=============================================================================
+# Target rules for targets named type_system_benchmark
+
+# Build rule for target.
+type_system_benchmark: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 type_system_benchmark
+.PHONY : type_system_benchmark
+
+# fast build rule for target.
+type_system_benchmark/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/type_system_benchmark.dir/build.make test/CMakeFiles/type_system_benchmark.dir/build
+.PHONY : type_system_benchmark/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -296,6 +309,7 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... lru_k_replacer_benchmark"
+	@echo "... type_system_benchmark"
 .PHONY : help
 
 

@@ -213,6 +213,20 @@ buffer_pool_benchmark/fast:
 	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/buffer_pool_benchmark.dir/build.make test/CMakeFiles/buffer_pool_benchmark.dir/build
 .PHONY : buffer_pool_benchmark/fast
 
+# Convenience name for target.
+test/CMakeFiles/type_system_benchmark.dir/rule:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/type_system_benchmark.dir/rule
+.PHONY : test/CMakeFiles/type_system_benchmark.dir/rule
+
+# Convenience name for target.
+type_system_benchmark: test/CMakeFiles/type_system_benchmark.dir/rule
+.PHONY : type_system_benchmark
+
+# fast build rule for target.
+type_system_benchmark/fast:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/type_system_benchmark.dir/build.make test/CMakeFiles/type_system_benchmark.dir/build
+.PHONY : type_system_benchmark/fast
+
 buffer/buffer_pool_benchmark.o: buffer/buffer_pool_benchmark.cpp.o
 .PHONY : buffer/buffer_pool_benchmark.o
 
@@ -285,6 +299,30 @@ storage/disk/disk_scheduler_benchmark.cpp.s:
 	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/disk_scheduler_benchmark.dir/build.make test/CMakeFiles/disk_scheduler_benchmark.dir/storage/disk/disk_scheduler_benchmark.cpp.s
 .PHONY : storage/disk/disk_scheduler_benchmark.cpp.s
 
+type/type_system_benchmark.o: type/type_system_benchmark.cpp.o
+.PHONY : type/type_system_benchmark.o
+
+# target to build an object file
+type/type_system_benchmark.cpp.o:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/type_system_benchmark.dir/build.make test/CMakeFiles/type_system_benchmark.dir/type/type_system_benchmark.cpp.o
+.PHONY : type/type_system_benchmark.cpp.o
+
+type/type_system_benchmark.i: type/type_system_benchmark.cpp.i
+.PHONY : type/type_system_benchmark.i
+
+# target to preprocess a source file
+type/type_system_benchmark.cpp.i:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/type_system_benchmark.dir/build.make test/CMakeFiles/type_system_benchmark.dir/type/type_system_benchmark.cpp.i
+.PHONY : type/type_system_benchmark.cpp.i
+
+type/type_system_benchmark.s: type/type_system_benchmark.cpp.s
+.PHONY : type/type_system_benchmark.s
+
+# target to generate assembly for a file
+type/type_system_benchmark.cpp.s:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/type_system_benchmark.dir/build.make test/CMakeFiles/type_system_benchmark.dir/type/type_system_benchmark.cpp.s
+.PHONY : type/type_system_benchmark.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -301,6 +339,7 @@ help:
 	@echo "... buffer_pool_benchmark"
 	@echo "... disk_scheduler_benchmark"
 	@echo "... lru_k_replacer_benchmark"
+	@echo "... type_system_benchmark"
 	@echo "... buffer/buffer_pool_benchmark.o"
 	@echo "... buffer/buffer_pool_benchmark.i"
 	@echo "... buffer/buffer_pool_benchmark.s"
@@ -310,6 +349,9 @@ help:
 	@echo "... storage/disk/disk_scheduler_benchmark.o"
 	@echo "... storage/disk/disk_scheduler_benchmark.i"
 	@echo "... storage/disk/disk_scheduler_benchmark.s"
+	@echo "... type/type_system_benchmark.o"
+	@echo "... type/type_system_benchmark.i"
+	@echo "... type/type_system_benchmark.s"
 .PHONY : help
 
 

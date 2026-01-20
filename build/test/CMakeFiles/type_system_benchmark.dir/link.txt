@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/type_system_benchmark.dir/type/type_system_benchmark.cpp.o -o ../bin/type_system_benchmark  -Wl,-rpath,/home/wjq/workplace/code/bustub/build/lib ../lib/libbustub_lib.so ../lib/libgtest_main.a ../lib/libgtest.a -lpthread 

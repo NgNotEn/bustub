@@ -281,6 +281,102 @@ storage/disk/disk_scheduler.cpp.s:
 	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.s
 .PHONY : storage/disk/disk_scheduler.cpp.s
 
+type/integer_type.o: type/integer_type.cpp.o
+.PHONY : type/integer_type.o
+
+# target to build an object file
+type/integer_type.cpp.o:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/type/integer_type.cpp.o
+.PHONY : type/integer_type.cpp.o
+
+type/integer_type.i: type/integer_type.cpp.i
+.PHONY : type/integer_type.i
+
+# target to preprocess a source file
+type/integer_type.cpp.i:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/type/integer_type.cpp.i
+.PHONY : type/integer_type.cpp.i
+
+type/integer_type.s: type/integer_type.cpp.s
+.PHONY : type/integer_type.s
+
+# target to generate assembly for a file
+type/integer_type.cpp.s:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/type/integer_type.cpp.s
+.PHONY : type/integer_type.cpp.s
+
+type/type.o: type/type.cpp.o
+.PHONY : type/type.o
+
+# target to build an object file
+type/type.cpp.o:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/type/type.cpp.o
+.PHONY : type/type.cpp.o
+
+type/type.i: type/type.cpp.i
+.PHONY : type/type.i
+
+# target to preprocess a source file
+type/type.cpp.i:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/type/type.cpp.i
+.PHONY : type/type.cpp.i
+
+type/type.s: type/type.cpp.s
+.PHONY : type/type.s
+
+# target to generate assembly for a file
+type/type.cpp.s:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/type/type.cpp.s
+.PHONY : type/type.cpp.s
+
+type/value.o: type/value.cpp.o
+.PHONY : type/value.o
+
+# target to build an object file
+type/value.cpp.o:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/type/value.cpp.o
+.PHONY : type/value.cpp.o
+
+type/value.i: type/value.cpp.i
+.PHONY : type/value.i
+
+# target to preprocess a source file
+type/value.cpp.i:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/type/value.cpp.i
+.PHONY : type/value.cpp.i
+
+type/value.s: type/value.cpp.s
+.PHONY : type/value.s
+
+# target to generate assembly for a file
+type/value.cpp.s:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/type/value.cpp.s
+.PHONY : type/value.cpp.s
+
+type/varlen_type.o: type/varlen_type.cpp.o
+.PHONY : type/varlen_type.o
+
+# target to build an object file
+type/varlen_type.cpp.o:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/type/varlen_type.cpp.o
+.PHONY : type/varlen_type.cpp.o
+
+type/varlen_type.i: type/varlen_type.cpp.i
+.PHONY : type/varlen_type.i
+
+# target to preprocess a source file
+type/varlen_type.cpp.i:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/type/varlen_type.cpp.i
+.PHONY : type/varlen_type.cpp.i
+
+type/varlen_type.s: type/varlen_type.cpp.s
+.PHONY : type/varlen_type.s
+
+# target to generate assembly for a file
+type/varlen_type.cpp.s:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/type/varlen_type.cpp.s
+.PHONY : type/varlen_type.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -307,6 +403,18 @@ help:
 	@echo "... storage/disk/disk_scheduler.o"
 	@echo "... storage/disk/disk_scheduler.i"
 	@echo "... storage/disk/disk_scheduler.s"
+	@echo "... type/integer_type.o"
+	@echo "... type/integer_type.i"
+	@echo "... type/integer_type.s"
+	@echo "... type/type.o"
+	@echo "... type/type.i"
+	@echo "... type/type.s"
+	@echo "... type/value.o"
+	@echo "... type/value.i"
+	@echo "... type/value.s"
+	@echo "... type/varlen_type.o"
+	@echo "... type/varlen_type.i"
+	@echo "... type/varlen_type.s"
 .PHONY : help
 
 

@@ -48,6 +48,30 @@
   "output": "src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o"
 },
 {
+  "directory": "/home/wjq/workplace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workplace/code/bustub/src/include -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/type/value.cpp.o -c /home/wjq/workplace/code/bustub/src/type/value.cpp",
+  "file": "/home/wjq/workplace/code/bustub/src/type/value.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/type/value.cpp.o"
+},
+{
+  "directory": "/home/wjq/workplace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workplace/code/bustub/src/include -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/type/type.cpp.o -c /home/wjq/workplace/code/bustub/src/type/type.cpp",
+  "file": "/home/wjq/workplace/code/bustub/src/type/type.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/type/type.cpp.o"
+},
+{
+  "directory": "/home/wjq/workplace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workplace/code/bustub/src/include -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/type/integer_type.cpp.o -c /home/wjq/workplace/code/bustub/src/type/integer_type.cpp",
+  "file": "/home/wjq/workplace/code/bustub/src/type/integer_type.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/type/integer_type.cpp.o"
+},
+{
+  "directory": "/home/wjq/workplace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workplace/code/bustub/src/include -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/type/varlen_type.cpp.o -c /home/wjq/workplace/code/bustub/src/type/varlen_type.cpp",
+  "file": "/home/wjq/workplace/code/bustub/src/type/varlen_type.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/type/varlen_type.cpp.o"
+},
+{
   "directory": "/home/wjq/workplace/code/bustub/build/test",
   "command": "/usr/bin/c++  -I/home/wjq/workplace/code/bustub/src/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/lru_k_replacer_benchmark.dir/buffer/lru_k_replacer_benchmark.cpp.o -c /home/wjq/workplace/code/bustub/test/buffer/lru_k_replacer_benchmark.cpp",
   "file": "/home/wjq/workplace/code/bustub/test/buffer/lru_k_replacer_benchmark.cpp",
@@ -64,5 +88,11 @@
   "command": "/usr/bin/c++  -I/home/wjq/workplace/code/bustub/src/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/buffer_pool_benchmark.dir/buffer/buffer_pool_benchmark.cpp.o -c /home/wjq/workplace/code/bustub/test/buffer/buffer_pool_benchmark.cpp",
   "file": "/home/wjq/workplace/code/bustub/test/buffer/buffer_pool_benchmark.cpp",
   "output": "test/CMakeFiles/buffer_pool_benchmark.dir/buffer/buffer_pool_benchmark.cpp.o"
+},
+{
+  "directory": "/home/wjq/workplace/code/bustub/build/test",
+  "command": "/usr/bin/c++  -I/home/wjq/workplace/code/bustub/src/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/type_system_benchmark.dir/type/type_system_benchmark.cpp.o -c /home/wjq/workplace/code/bustub/test/type/type_system_benchmark.cpp",
+  "file": "/home/wjq/workplace/code/bustub/test/type/type_system_benchmark.cpp",
+  "output": "test/CMakeFiles/type_system_benchmark.dir/type/type_system_benchmark.cpp.o"
 }
 ]

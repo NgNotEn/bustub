@@ -9,6 +9,14 @@ file(REMOVE_RECURSE
   "CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o.d"
   "CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o"
   "CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o.d"
+  "CMakeFiles/bustub_lib.dir/type/integer_type.cpp.o"
+  "CMakeFiles/bustub_lib.dir/type/integer_type.cpp.o.d"
+  "CMakeFiles/bustub_lib.dir/type/type.cpp.o"
+  "CMakeFiles/bustub_lib.dir/type/type.cpp.o.d"
+  "CMakeFiles/bustub_lib.dir/type/value.cpp.o"
+  "CMakeFiles/bustub_lib.dir/type/value.cpp.o.d"
+  "CMakeFiles/bustub_lib.dir/type/varlen_type.cpp.o"
+  "CMakeFiles/bustub_lib.dir/type/varlen_type.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.
