@@ -181,7 +181,7 @@ gmock: cmake_check_build_system
 
 # fast build rule for target.
 gmock/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+	$(MAKE) $(MAKESILENT) -f third_party/googletest/googlemock/CMakeFiles/gmock.dir/build.make third_party/googletest/googlemock/CMakeFiles/gmock.dir/build
 .PHONY : gmock/fast
 
 #=============================================================================
@@ -194,7 +194,7 @@ gmock_main: cmake_check_build_system
 
 # fast build rule for target.
 gmock_main/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+	$(MAKE) $(MAKESILENT) -f third_party/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make third_party/googletest/googlemock/CMakeFiles/gmock_main.dir/build
 .PHONY : gmock_main/fast
 
 #=============================================================================
@@ -207,7 +207,7 @@ gtest: cmake_check_build_system
 
 # fast build rule for target.
 gtest/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+	$(MAKE) $(MAKESILENT) -f third_party/googletest/googletest/CMakeFiles/gtest.dir/build.make third_party/googletest/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
 #=============================================================================
@@ -220,7 +220,7 @@ gtest_main: cmake_check_build_system
 
 # fast build rule for target.
 gtest_main/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+	$(MAKE) $(MAKESILENT) -f third_party/googletest/googletest/CMakeFiles/gtest_main.dir/build.make third_party/googletest/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
 #=============================================================================
@@ -237,69 +237,17 @@ bustub_lib/fast:
 .PHONY : bustub_lib/fast
 
 #=============================================================================
-# Target rules for targets named lru_k_replacer_benchmark
+# Target rules for targets named bpm_test
 
 # Build rule for target.
-lru_k_replacer_benchmark: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lru_k_replacer_benchmark
-.PHONY : lru_k_replacer_benchmark
+bpm_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bpm_test
+.PHONY : bpm_test
 
 # fast build rule for target.
-lru_k_replacer_benchmark/fast:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/lru_k_replacer_benchmark.dir/build.make test/CMakeFiles/lru_k_replacer_benchmark.dir/build
-.PHONY : lru_k_replacer_benchmark/fast
-
-#=============================================================================
-# Target rules for targets named disk_scheduler_benchmark
-
-# Build rule for target.
-disk_scheduler_benchmark: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 disk_scheduler_benchmark
-.PHONY : disk_scheduler_benchmark
-
-# fast build rule for target.
-disk_scheduler_benchmark/fast:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/disk_scheduler_benchmark.dir/build.make test/CMakeFiles/disk_scheduler_benchmark.dir/build
-.PHONY : disk_scheduler_benchmark/fast
-
-#=============================================================================
-# Target rules for targets named buffer_pool_benchmark
-
-# Build rule for target.
-buffer_pool_benchmark: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 buffer_pool_benchmark
-.PHONY : buffer_pool_benchmark
-
-# fast build rule for target.
-buffer_pool_benchmark/fast:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/buffer_pool_benchmark.dir/build.make test/CMakeFiles/buffer_pool_benchmark.dir/build
-.PHONY : buffer_pool_benchmark/fast
-
-#=============================================================================
-# Target rules for targets named type_system_benchmark
-
-# Build rule for target.
-type_system_benchmark: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 type_system_benchmark
-.PHONY : type_system_benchmark
-
-# fast build rule for target.
-type_system_benchmark/fast:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/type_system_benchmark.dir/build.make test/CMakeFiles/type_system_benchmark.dir/build
-.PHONY : type_system_benchmark/fast
-
-#=============================================================================
-# Target rules for targets named table_page_benchmark
-
-# Build rule for target.
-table_page_benchmark: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 table_page_benchmark
-.PHONY : table_page_benchmark
-
-# fast build rule for target.
-table_page_benchmark/fast:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/table_page_benchmark.dir/build.make test/CMakeFiles/table_page_benchmark.dir/build
-.PHONY : table_page_benchmark/fast
+bpm_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/bpm_test.dir/build.make test/CMakeFiles/bpm_test.dir/build
+.PHONY : bpm_test/fast
 
 # Help Target
 help:
@@ -314,16 +262,12 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... buffer_pool_benchmark"
+	@echo "... bpm_test"
 	@echo "... bustub_lib"
-	@echo "... disk_scheduler_benchmark"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... lru_k_replacer_benchmark"
-	@echo "... table_page_benchmark"
-	@echo "... type_system_benchmark"
 .PHONY : help
 
 

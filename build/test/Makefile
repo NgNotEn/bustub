@@ -172,194 +172,42 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/CMakeFiles/lru_k_replacer_benchmark.dir/rule:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/lru_k_replacer_benchmark.dir/rule
-.PHONY : test/CMakeFiles/lru_k_replacer_benchmark.dir/rule
+test/CMakeFiles/bpm_test.dir/rule:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/bpm_test.dir/rule
+.PHONY : test/CMakeFiles/bpm_test.dir/rule
 
 # Convenience name for target.
-lru_k_replacer_benchmark: test/CMakeFiles/lru_k_replacer_benchmark.dir/rule
-.PHONY : lru_k_replacer_benchmark
+bpm_test: test/CMakeFiles/bpm_test.dir/rule
+.PHONY : bpm_test
 
 # fast build rule for target.
-lru_k_replacer_benchmark/fast:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/lru_k_replacer_benchmark.dir/build.make test/CMakeFiles/lru_k_replacer_benchmark.dir/build
-.PHONY : lru_k_replacer_benchmark/fast
+bpm_test/fast:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/bpm_test.dir/build.make test/CMakeFiles/bpm_test.dir/build
+.PHONY : bpm_test/fast
 
-# Convenience name for target.
-test/CMakeFiles/disk_scheduler_benchmark.dir/rule:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/disk_scheduler_benchmark.dir/rule
-.PHONY : test/CMakeFiles/disk_scheduler_benchmark.dir/rule
-
-# Convenience name for target.
-disk_scheduler_benchmark: test/CMakeFiles/disk_scheduler_benchmark.dir/rule
-.PHONY : disk_scheduler_benchmark
-
-# fast build rule for target.
-disk_scheduler_benchmark/fast:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/disk_scheduler_benchmark.dir/build.make test/CMakeFiles/disk_scheduler_benchmark.dir/build
-.PHONY : disk_scheduler_benchmark/fast
-
-# Convenience name for target.
-test/CMakeFiles/buffer_pool_benchmark.dir/rule:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/buffer_pool_benchmark.dir/rule
-.PHONY : test/CMakeFiles/buffer_pool_benchmark.dir/rule
-
-# Convenience name for target.
-buffer_pool_benchmark: test/CMakeFiles/buffer_pool_benchmark.dir/rule
-.PHONY : buffer_pool_benchmark
-
-# fast build rule for target.
-buffer_pool_benchmark/fast:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/buffer_pool_benchmark.dir/build.make test/CMakeFiles/buffer_pool_benchmark.dir/build
-.PHONY : buffer_pool_benchmark/fast
-
-# Convenience name for target.
-test/CMakeFiles/type_system_benchmark.dir/rule:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/type_system_benchmark.dir/rule
-.PHONY : test/CMakeFiles/type_system_benchmark.dir/rule
-
-# Convenience name for target.
-type_system_benchmark: test/CMakeFiles/type_system_benchmark.dir/rule
-.PHONY : type_system_benchmark
-
-# fast build rule for target.
-type_system_benchmark/fast:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/type_system_benchmark.dir/build.make test/CMakeFiles/type_system_benchmark.dir/build
-.PHONY : type_system_benchmark/fast
-
-# Convenience name for target.
-test/CMakeFiles/table_page_benchmark.dir/rule:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/table_page_benchmark.dir/rule
-.PHONY : test/CMakeFiles/table_page_benchmark.dir/rule
-
-# Convenience name for target.
-table_page_benchmark: test/CMakeFiles/table_page_benchmark.dir/rule
-.PHONY : table_page_benchmark
-
-# fast build rule for target.
-table_page_benchmark/fast:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/table_page_benchmark.dir/build.make test/CMakeFiles/table_page_benchmark.dir/build
-.PHONY : table_page_benchmark/fast
-
-buffer/buffer_pool_benchmark.o: buffer/buffer_pool_benchmark.cpp.o
-.PHONY : buffer/buffer_pool_benchmark.o
+buffer/buffer_pool_manager_test.o: buffer/buffer_pool_manager_test.cpp.o
+.PHONY : buffer/buffer_pool_manager_test.o
 
 # target to build an object file
-buffer/buffer_pool_benchmark.cpp.o:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/buffer_pool_benchmark.dir/build.make test/CMakeFiles/buffer_pool_benchmark.dir/buffer/buffer_pool_benchmark.cpp.o
-.PHONY : buffer/buffer_pool_benchmark.cpp.o
+buffer/buffer_pool_manager_test.cpp.o:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/bpm_test.dir/build.make test/CMakeFiles/bpm_test.dir/buffer/buffer_pool_manager_test.cpp.o
+.PHONY : buffer/buffer_pool_manager_test.cpp.o
 
-buffer/buffer_pool_benchmark.i: buffer/buffer_pool_benchmark.cpp.i
-.PHONY : buffer/buffer_pool_benchmark.i
-
-# target to preprocess a source file
-buffer/buffer_pool_benchmark.cpp.i:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/buffer_pool_benchmark.dir/build.make test/CMakeFiles/buffer_pool_benchmark.dir/buffer/buffer_pool_benchmark.cpp.i
-.PHONY : buffer/buffer_pool_benchmark.cpp.i
-
-buffer/buffer_pool_benchmark.s: buffer/buffer_pool_benchmark.cpp.s
-.PHONY : buffer/buffer_pool_benchmark.s
-
-# target to generate assembly for a file
-buffer/buffer_pool_benchmark.cpp.s:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/buffer_pool_benchmark.dir/build.make test/CMakeFiles/buffer_pool_benchmark.dir/buffer/buffer_pool_benchmark.cpp.s
-.PHONY : buffer/buffer_pool_benchmark.cpp.s
-
-buffer/lru_k_replacer_benchmark.o: buffer/lru_k_replacer_benchmark.cpp.o
-.PHONY : buffer/lru_k_replacer_benchmark.o
-
-# target to build an object file
-buffer/lru_k_replacer_benchmark.cpp.o:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/lru_k_replacer_benchmark.dir/build.make test/CMakeFiles/lru_k_replacer_benchmark.dir/buffer/lru_k_replacer_benchmark.cpp.o
-.PHONY : buffer/lru_k_replacer_benchmark.cpp.o
-
-buffer/lru_k_replacer_benchmark.i: buffer/lru_k_replacer_benchmark.cpp.i
-.PHONY : buffer/lru_k_replacer_benchmark.i
+buffer/buffer_pool_manager_test.i: buffer/buffer_pool_manager_test.cpp.i
+.PHONY : buffer/buffer_pool_manager_test.i
 
 # target to preprocess a source file
-buffer/lru_k_replacer_benchmark.cpp.i:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/lru_k_replacer_benchmark.dir/build.make test/CMakeFiles/lru_k_replacer_benchmark.dir/buffer/lru_k_replacer_benchmark.cpp.i
-.PHONY : buffer/lru_k_replacer_benchmark.cpp.i
+buffer/buffer_pool_manager_test.cpp.i:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/bpm_test.dir/build.make test/CMakeFiles/bpm_test.dir/buffer/buffer_pool_manager_test.cpp.i
+.PHONY : buffer/buffer_pool_manager_test.cpp.i
 
-buffer/lru_k_replacer_benchmark.s: buffer/lru_k_replacer_benchmark.cpp.s
-.PHONY : buffer/lru_k_replacer_benchmark.s
-
-# target to generate assembly for a file
-buffer/lru_k_replacer_benchmark.cpp.s:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/lru_k_replacer_benchmark.dir/build.make test/CMakeFiles/lru_k_replacer_benchmark.dir/buffer/lru_k_replacer_benchmark.cpp.s
-.PHONY : buffer/lru_k_replacer_benchmark.cpp.s
-
-storage/disk/disk_scheduler_benchmark.o: storage/disk/disk_scheduler_benchmark.cpp.o
-.PHONY : storage/disk/disk_scheduler_benchmark.o
-
-# target to build an object file
-storage/disk/disk_scheduler_benchmark.cpp.o:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/disk_scheduler_benchmark.dir/build.make test/CMakeFiles/disk_scheduler_benchmark.dir/storage/disk/disk_scheduler_benchmark.cpp.o
-.PHONY : storage/disk/disk_scheduler_benchmark.cpp.o
-
-storage/disk/disk_scheduler_benchmark.i: storage/disk/disk_scheduler_benchmark.cpp.i
-.PHONY : storage/disk/disk_scheduler_benchmark.i
-
-# target to preprocess a source file
-storage/disk/disk_scheduler_benchmark.cpp.i:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/disk_scheduler_benchmark.dir/build.make test/CMakeFiles/disk_scheduler_benchmark.dir/storage/disk/disk_scheduler_benchmark.cpp.i
-.PHONY : storage/disk/disk_scheduler_benchmark.cpp.i
-
-storage/disk/disk_scheduler_benchmark.s: storage/disk/disk_scheduler_benchmark.cpp.s
-.PHONY : storage/disk/disk_scheduler_benchmark.s
+buffer/buffer_pool_manager_test.s: buffer/buffer_pool_manager_test.cpp.s
+.PHONY : buffer/buffer_pool_manager_test.s
 
 # target to generate assembly for a file
-storage/disk/disk_scheduler_benchmark.cpp.s:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/disk_scheduler_benchmark.dir/build.make test/CMakeFiles/disk_scheduler_benchmark.dir/storage/disk/disk_scheduler_benchmark.cpp.s
-.PHONY : storage/disk/disk_scheduler_benchmark.cpp.s
-
-storage/table/table_page_benchmark.o: storage/table/table_page_benchmark.cpp.o
-.PHONY : storage/table/table_page_benchmark.o
-
-# target to build an object file
-storage/table/table_page_benchmark.cpp.o:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/table_page_benchmark.dir/build.make test/CMakeFiles/table_page_benchmark.dir/storage/table/table_page_benchmark.cpp.o
-.PHONY : storage/table/table_page_benchmark.cpp.o
-
-storage/table/table_page_benchmark.i: storage/table/table_page_benchmark.cpp.i
-.PHONY : storage/table/table_page_benchmark.i
-
-# target to preprocess a source file
-storage/table/table_page_benchmark.cpp.i:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/table_page_benchmark.dir/build.make test/CMakeFiles/table_page_benchmark.dir/storage/table/table_page_benchmark.cpp.i
-.PHONY : storage/table/table_page_benchmark.cpp.i
-
-storage/table/table_page_benchmark.s: storage/table/table_page_benchmark.cpp.s
-.PHONY : storage/table/table_page_benchmark.s
-
-# target to generate assembly for a file
-storage/table/table_page_benchmark.cpp.s:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/table_page_benchmark.dir/build.make test/CMakeFiles/table_page_benchmark.dir/storage/table/table_page_benchmark.cpp.s
-.PHONY : storage/table/table_page_benchmark.cpp.s
-
-type/type_system_benchmark.o: type/type_system_benchmark.cpp.o
-.PHONY : type/type_system_benchmark.o
-
-# target to build an object file
-type/type_system_benchmark.cpp.o:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/type_system_benchmark.dir/build.make test/CMakeFiles/type_system_benchmark.dir/type/type_system_benchmark.cpp.o
-.PHONY : type/type_system_benchmark.cpp.o
-
-type/type_system_benchmark.i: type/type_system_benchmark.cpp.i
-.PHONY : type/type_system_benchmark.i
-
-# target to preprocess a source file
-type/type_system_benchmark.cpp.i:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/type_system_benchmark.dir/build.make test/CMakeFiles/type_system_benchmark.dir/type/type_system_benchmark.cpp.i
-.PHONY : type/type_system_benchmark.cpp.i
-
-type/type_system_benchmark.s: type/type_system_benchmark.cpp.s
-.PHONY : type/type_system_benchmark.s
-
-# target to generate assembly for a file
-type/type_system_benchmark.cpp.s:
-	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/type_system_benchmark.dir/build.make test/CMakeFiles/type_system_benchmark.dir/type/type_system_benchmark.cpp.s
-.PHONY : type/type_system_benchmark.cpp.s
+buffer/buffer_pool_manager_test.cpp.s:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/bpm_test.dir/build.make test/CMakeFiles/bpm_test.dir/buffer/buffer_pool_manager_test.cpp.s
+.PHONY : buffer/buffer_pool_manager_test.cpp.s
 
 # Help Target
 help:
@@ -374,26 +222,10 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... buffer_pool_benchmark"
-	@echo "... disk_scheduler_benchmark"
-	@echo "... lru_k_replacer_benchmark"
-	@echo "... table_page_benchmark"
-	@echo "... type_system_benchmark"
-	@echo "... buffer/buffer_pool_benchmark.o"
-	@echo "... buffer/buffer_pool_benchmark.i"
-	@echo "... buffer/buffer_pool_benchmark.s"
-	@echo "... buffer/lru_k_replacer_benchmark.o"
-	@echo "... buffer/lru_k_replacer_benchmark.i"
-	@echo "... buffer/lru_k_replacer_benchmark.s"
-	@echo "... storage/disk/disk_scheduler_benchmark.o"
-	@echo "... storage/disk/disk_scheduler_benchmark.i"
-	@echo "... storage/disk/disk_scheduler_benchmark.s"
-	@echo "... storage/table/table_page_benchmark.o"
-	@echo "... storage/table/table_page_benchmark.i"
-	@echo "... storage/table/table_page_benchmark.s"
-	@echo "... type/type_system_benchmark.o"
-	@echo "... type/type_system_benchmark.i"
-	@echo "... type/type_system_benchmark.s"
+	@echo "... bpm_test"
+	@echo "... buffer/buffer_pool_manager_test.o"
+	@echo "... buffer/buffer_pool_manager_test.i"
+	@echo "... buffer/buffer_pool_manager_test.s"
 .PHONY : help
 
 

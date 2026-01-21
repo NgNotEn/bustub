@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/bpm_test.dir/buffer/buffer_pool_manager_test.cpp.o -o ../bin/bpm_test  -Wl,-rpath,/home/wjq/workplace/code/bustub/build/lib ../lib/libbustub_lib.so ../lib/libgtest.a ../lib/libgtest_main.a -lpthread ../lib/libgtest.a 

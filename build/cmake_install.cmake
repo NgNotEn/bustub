@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/wjq/workplace/code/bustub/build/_deps/googletest-build/cmake_install.cmake")
+  include("/home/wjq/workplace/code/bustub/build/third_party/googletest/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

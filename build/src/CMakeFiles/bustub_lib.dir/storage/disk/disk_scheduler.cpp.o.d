@@ -169,7 +169,6 @@ src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.o: \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/thread /usr/include/c++/13/bits/this_thread_sleep.h \
  /home/wjq/workplace/code/bustub/src/include/common/config.h \
- /usr/include/c++/13/chrono \
  /home/wjq/workplace/code/bustub/src/include/storage/disk/disk_manager.h \
  /usr/include/c++/13/fstream /usr/include/c++/13/istream \
  /usr/include/c++/13/ios /usr/include/c++/13/bits/ios_base.h \

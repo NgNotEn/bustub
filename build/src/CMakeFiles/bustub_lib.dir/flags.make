@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -Dbustub_lib_EXPORTS
 
-CXX_INCLUDES = -I/home/wjq/workplace/code/bustub/src/include
+CXX_INCLUDES = -I/home/wjq/workplace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workplace/code/bustub/src/include
 
 CXX_FLAGS = -std=c++17 -fPIC
 

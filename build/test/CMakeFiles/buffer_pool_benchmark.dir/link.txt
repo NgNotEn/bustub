@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/buffer_pool_benchmark.dir/buffer/buffer_pool_benchmark.cpp.o -o ../bin/buffer_pool_benchmark  -Wl,-rpath,/home/wjq/workplace/code/bustub/build/lib ../lib/libbustub_lib.so ../lib/libgtest_main.a ../lib/libgtest.a -lpthread 
