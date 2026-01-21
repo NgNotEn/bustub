@@ -1,3 +1,0 @@
-bpm_test 0 0
----
-bpm_test

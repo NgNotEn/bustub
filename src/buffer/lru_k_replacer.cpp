@@ -1,4 +1,5 @@
 #include "buffer/lru_k_replacer.h"
+#include "common/exception.h"
 #include <cstddef>
 #include <cstring>
 #include <mutex>

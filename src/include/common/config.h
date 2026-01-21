@@ -1,8 +1,6 @@
 #pragma once
 
 #include <cstdint>
-#include <atomic>
-#include <chrono>
 
 namespace bustub {
 
@@ -37,5 +35,7 @@ static constexpr lsn_t INVALID_LSN = -1;
 static constexpr page_id_t HEADER_PAGE_ID = 0;
 // Page Size (4KB)
 static constexpr int PAGE_SIZE = 4096;  // Bytes
+// invalid offset
+static constexpr uint32_t INVALID_OFFSET = -1;
 
 } 

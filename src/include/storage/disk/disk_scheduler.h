@@ -1,6 +1,7 @@
 #pragma once
 
 #include <future>   // for std::promise, std::future
+#include <memory>
 #include <optional> // for std::optional
 #include <thread>   // for std::thread
 #include "common/config.h"
@@ -12,6 +13,8 @@ namespace bustub {
     * @brief Represents a Write or Read request for the DiskManager to execute.
     */
     struct DiskRequest {
+        using DiskSchedulerPromise = std::promise<bool>;
+
         /** Flag indicating whether the request is a write or a read. */
         bool is_write_;
 
@@ -26,26 +29,29 @@ namespace bustub {
         page_id_t page_id_;
 
         /** Callback used to signal to the request issuer when the request has been completed. */
-        std::promise<bool> callback_;
+        DiskSchedulerPromise callback_;
 
-        DiskRequest(page_id_t page_id, bool is_write, char* page_data)
-        : page_id_(page_id), is_write_(is_write), page_data_(page_data) {}
+        DiskRequest(bool is_write, char* page_data, page_id_t page_id, DiskSchedulerPromise promise)
+        : page_id_(page_id), is_write_(is_write), page_data_(page_data), callback_(std::move(promise)){}
 
         DiskRequest(DiskRequest &&other) = default;     // move-only
     };
 
     class DiskScheduler{
     public:
-        explicit DiskScheduler(DiskManager *disk_manager);
+        using DiskSchedulerPromise = std::promise<bool>;
+
+        explicit DiskScheduler(std::unique_ptr<DiskManager> disk_manager);
         ~DiskScheduler();
 
         auto Schedule(DiskRequest dr) -> void;   // move-only request into queue, but wont block
         auto StartWorkerThread() -> void;       // main loop to process request
 
-        using DiskSchedulerPromise = std::promise<bool>;
     
     private:
-        DiskManager* disk_manager_;
+        // heap
+        std::unique_ptr<DiskManager> disk_manager_;
+        // stack
         Channel<DiskRequest> channel_;
         std::optional<std::thread> background_thread_;
     };

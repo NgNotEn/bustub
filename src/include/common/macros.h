@@ -1,7 +1,6 @@
 #pragma once
 
 #include <cassert>
-#include <stdexcept>
 
 namespace bustub {
 

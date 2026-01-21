@@ -15,29 +15,26 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib) # 静态库
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib) # 动态库
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin) # 可执行文件
 
-# ==========================================
-# 引入 GoogleTest (FetchContent 模式)
-# ==========================================
-include(FetchContent)
-message(STATUS "Fetching GoogleTest...")
 
-FetchContent_Declare(
-  googletest
-  URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
-)
-# For Windows: Prevent overriding the parent project's compiler/linker settings
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(googletest)
+
+# ==========================================
+# 测试相关设置
+# ==========================================
+message(STATUS "Activate GoogleTest ...")
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)  # windows 环境下，强制绑定到动态链接的运行时库
+
+# 启用测试 (必须在 add_subdirectory(test) 之前调用)
+# 作用：它会在构建目录下生成一个名为 CTestTestfile.cmake 的文件。
+# 只有写了这一行，你在终端里输入 ctest 命令时，CMake 才知道去哪里找测试用例跑
+enable_testing()
 
 # ==========================================
 # 添加子目录
 # ==========================================
-include_directories(src/include)  # 添加头文件搜索路径
-
-# 启用测试 (必须在 add_subdirectory(test) 之前调用)
-enable_testing()
-# 作用：它会在构建目录下生成一个名为 CTestTestfile.cmake 的文件。
-# 只有写了这一行，你在终端里输入 ctest 命令时，CMake 才知道去哪里找测试用例跑
-
+# 添加头文件搜索路径
+include_directories(third_party/googletest/googletest/include)  # 添加 GoogleTest 头文件搜索路径
+include_directories(src/include)  # 添加src头文件搜索路径
+# 添加源文件子目录
+add_subdirectory(third_party/googletest)  # 添加 GoogleTest 子目录
 add_subdirectory(src)   # 添加源代码子目录（包含子CmakeLists）
 add_subdirectory(test)  # 添加测试子目录（包含子CmakeLists）

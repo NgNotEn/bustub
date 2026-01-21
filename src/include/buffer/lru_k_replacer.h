@@ -10,13 +10,11 @@ its backward k-distance. When multiple frames have +inf backward k-distance,
 the replacer evicts the frame with the earliest overall timestamp 
 (i.e., the frame whose least-recent recorded access is the overall least recent access).
 */
-
 #include <cstddef>
 #include <limits>
 #include <queue>
 #include <mutex>
 #include <unordered_map>
-#include "common/exception.h"
 #include "common/config.h"
 #include "common/macros.h"
 
@@ -26,14 +24,14 @@ the replacer evicts the frame with the earliest overall timestamp
 namespace bustub {
     class LRUKReplacer {
     public:
-        explicit LRUKReplacer(size_t, size_t);
+        explicit LRUKReplacer(size_t num_frames, size_t k);
         
         DISALLOW_COPY_AND_MOVE(LRUKReplacer);
 
-        auto Evict(frame_id_t*) -> bool;    // try to evict frame
-        auto RecordAccess(frame_id_t) -> void;      // recorde a access of the frame
-        auto SetEvictable(frame_id_t, bool) -> void;// set the frame's status
-        auto Remove(frame_id_t) -> void;            // remove the frame what ever 
+        auto Evict(frame_id_t* frame_id) -> bool;    // try to evict frame
+        auto RecordAccess(frame_id_t frame_id) -> void;      // recorde a access of the frame
+        auto SetEvictable(frame_id_t frame_id, bool is_evictable) -> void;// set the frame's status
+        auto Remove(frame_id_t frame_id) -> void;            // remove the frame what ever 
         auto Size() -> std::size_t;                      // return the size of is_evictable frames
 
     private:

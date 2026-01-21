@@ -26,6 +26,15 @@ namespace bustub {
         if(db_file_.is_open()) db_file_.close();
     }
 
+    auto DiskManager::GetNumPages() -> std::size_t {
+    // get file size
+        db_file_.seekg(0, std::ios::end);
+        std::size_t size = db_file_.tellg();
+        db_file_.clear();
+        db_file_.seekg(0, std::ios::beg); // rollback pointer
+    return size / PAGE_SIZE;
+}
+
     auto DiskManager::ReadPage(page_id_t page_id, char* page_data) -> void {
         std::size_t offset = static_cast<std::size_t>(page_id) * PAGE_SIZE;
         db_file_.seekg(offset);

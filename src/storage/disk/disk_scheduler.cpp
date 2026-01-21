@@ -1,15 +1,19 @@
 #include "storage/disk/disk_scheduler.h"
 #include "storage/disk/disk_manager.h"
+#include <memory>
+#include <utility>
 
 namespace bustub {
 
-    DiskScheduler::DiskScheduler(DiskManager* disk_manager):disk_manager_(disk_manager){
+    DiskScheduler::DiskScheduler(std::unique_ptr<DiskManager> disk_manager){
+        disk_manager_ = std::move(disk_manager);
         // start thread after construct
         background_thread_.emplace(&DiskScheduler::StartWorkerThread, this);    
     }
 
     DiskScheduler::~DiskScheduler() {
-        DiskRequest poison_pill(-1, false, nullptr);
+        DiskSchedulerPromise promise;
+        DiskRequest poison_pill(false, nullptr, -1, std::move(promise));
         channel_.Put(std::move(poison_pill));
 
         if (background_thread_.has_value()) {
@@ -44,5 +48,4 @@ namespace bustub {
         }
     }
 
-    
 }
