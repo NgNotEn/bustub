@@ -42,6 +42,7 @@
 /home/wjq/workplace/code/bustub/build/test/CMakeFiles/disk_scheduler_benchmark.dir
 /home/wjq/workplace/code/bustub/build/test/CMakeFiles/buffer_pool_benchmark.dir
 /home/wjq/workplace/code/bustub/build/test/CMakeFiles/type_system_benchmark.dir
+/home/wjq/workplace/code/bustub/build/test/CMakeFiles/table_page_benchmark.dir
 /home/wjq/workplace/code/bustub/build/test/CMakeFiles/test.dir
 /home/wjq/workplace/code/bustub/build/test/CMakeFiles/edit_cache.dir
 /home/wjq/workplace/code/bustub/build/test/CMakeFiles/rebuild_cache.dir

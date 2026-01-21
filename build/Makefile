@@ -288,6 +288,19 @@ type_system_benchmark/fast:
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/type_system_benchmark.dir/build.make test/CMakeFiles/type_system_benchmark.dir/build
 .PHONY : type_system_benchmark/fast
 
+#=============================================================================
+# Target rules for targets named table_page_benchmark
+
+# Build rule for target.
+table_page_benchmark: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 table_page_benchmark
+.PHONY : table_page_benchmark
+
+# fast build rule for target.
+table_page_benchmark/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/table_page_benchmark.dir/build.make test/CMakeFiles/table_page_benchmark.dir/build
+.PHONY : table_page_benchmark/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -309,6 +322,7 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... lru_k_replacer_benchmark"
+	@echo "... table_page_benchmark"
 	@echo "... type_system_benchmark"
 .PHONY : help
 

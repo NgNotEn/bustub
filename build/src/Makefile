@@ -233,6 +233,54 @@ buffer/lru_k_replacer.cpp.s:
 	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.s
 .PHONY : buffer/lru_k_replacer.cpp.s
 
+catalog/column.o: catalog/column.cpp.o
+.PHONY : catalog/column.o
+
+# target to build an object file
+catalog/column.cpp.o:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/catalog/column.cpp.o
+.PHONY : catalog/column.cpp.o
+
+catalog/column.i: catalog/column.cpp.i
+.PHONY : catalog/column.i
+
+# target to preprocess a source file
+catalog/column.cpp.i:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/catalog/column.cpp.i
+.PHONY : catalog/column.cpp.i
+
+catalog/column.s: catalog/column.cpp.s
+.PHONY : catalog/column.s
+
+# target to generate assembly for a file
+catalog/column.cpp.s:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/catalog/column.cpp.s
+.PHONY : catalog/column.cpp.s
+
+catalog/schema.o: catalog/schema.cpp.o
+.PHONY : catalog/schema.o
+
+# target to build an object file
+catalog/schema.cpp.o:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/catalog/schema.cpp.o
+.PHONY : catalog/schema.cpp.o
+
+catalog/schema.i: catalog/schema.cpp.i
+.PHONY : catalog/schema.i
+
+# target to preprocess a source file
+catalog/schema.cpp.i:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/catalog/schema.cpp.i
+.PHONY : catalog/schema.cpp.i
+
+catalog/schema.s: catalog/schema.cpp.s
+.PHONY : catalog/schema.s
+
+# target to generate assembly for a file
+catalog/schema.cpp.s:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/catalog/schema.cpp.s
+.PHONY : catalog/schema.cpp.s
+
 storage/disk/disk_manager.o: storage/disk/disk_manager.cpp.o
 .PHONY : storage/disk/disk_manager.o
 
@@ -280,6 +328,54 @@ storage/disk/disk_scheduler.s: storage/disk/disk_scheduler.cpp.s
 storage/disk/disk_scheduler.cpp.s:
 	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/storage/disk/disk_scheduler.cpp.s
 .PHONY : storage/disk/disk_scheduler.cpp.s
+
+storage/table/table_page.o: storage/table/table_page.cpp.o
+.PHONY : storage/table/table_page.o
+
+# target to build an object file
+storage/table/table_page.cpp.o:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.o
+.PHONY : storage/table/table_page.cpp.o
+
+storage/table/table_page.i: storage/table/table_page.cpp.i
+.PHONY : storage/table/table_page.i
+
+# target to preprocess a source file
+storage/table/table_page.cpp.i:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.i
+.PHONY : storage/table/table_page.cpp.i
+
+storage/table/table_page.s: storage/table/table_page.cpp.s
+.PHONY : storage/table/table_page.s
+
+# target to generate assembly for a file
+storage/table/table_page.cpp.s:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.s
+.PHONY : storage/table/table_page.cpp.s
+
+storage/table/tuple.o: storage/table/tuple.cpp.o
+.PHONY : storage/table/tuple.o
+
+# target to build an object file
+storage/table/tuple.cpp.o:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.o
+.PHONY : storage/table/tuple.cpp.o
+
+storage/table/tuple.i: storage/table/tuple.cpp.i
+.PHONY : storage/table/tuple.i
+
+# target to preprocess a source file
+storage/table/tuple.cpp.i:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.i
+.PHONY : storage/table/tuple.cpp.i
+
+storage/table/tuple.s: storage/table/tuple.cpp.s
+.PHONY : storage/table/tuple.s
+
+# target to generate assembly for a file
+storage/table/tuple.cpp.s:
+	cd /home/wjq/workplace/code/bustub/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bustub_lib.dir/build.make src/CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.s
+.PHONY : storage/table/tuple.cpp.s
 
 type/integer_type.o: type/integer_type.cpp.o
 .PHONY : type/integer_type.o
@@ -397,12 +493,24 @@ help:
 	@echo "... buffer/lru_k_replacer.o"
 	@echo "... buffer/lru_k_replacer.i"
 	@echo "... buffer/lru_k_replacer.s"
+	@echo "... catalog/column.o"
+	@echo "... catalog/column.i"
+	@echo "... catalog/column.s"
+	@echo "... catalog/schema.o"
+	@echo "... catalog/schema.i"
+	@echo "... catalog/schema.s"
 	@echo "... storage/disk/disk_manager.o"
 	@echo "... storage/disk/disk_manager.i"
 	@echo "... storage/disk/disk_manager.s"
 	@echo "... storage/disk/disk_scheduler.o"
 	@echo "... storage/disk/disk_scheduler.i"
 	@echo "... storage/disk/disk_scheduler.s"
+	@echo "... storage/table/table_page.o"
+	@echo "... storage/table/table_page.i"
+	@echo "... storage/table/table_page.s"
+	@echo "... storage/table/tuple.o"
+	@echo "... storage/table/tuple.i"
+	@echo "... storage/table/tuple.s"
 	@echo "... type/integer_type.o"
 	@echo "... type/integer_type.i"
 	@echo "... type/integer_type.s"

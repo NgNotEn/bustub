@@ -1,5 +1,6 @@
-lru_k_replacer_benchmark 7 0.286319
-disk_scheduler_benchmark 5 0.0176672
-buffer_pool_benchmark 5 0.257877
-type_system_benchmark 1 0.378478
+lru_k_replacer_benchmark 11 0.182228
+disk_scheduler_benchmark 9 0.00867351
+buffer_pool_benchmark 9 0.181847
+type_system_benchmark 5 0.0761655
+table_page_benchmark 1 0.00325377
 ---

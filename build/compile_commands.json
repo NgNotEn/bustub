@@ -72,6 +72,30 @@
   "output": "src/CMakeFiles/bustub_lib.dir/type/varlen_type.cpp.o"
 },
 {
+  "directory": "/home/wjq/workplace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workplace/code/bustub/src/include -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/catalog/column.cpp.o -c /home/wjq/workplace/code/bustub/src/catalog/column.cpp",
+  "file": "/home/wjq/workplace/code/bustub/src/catalog/column.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/catalog/column.cpp.o"
+},
+{
+  "directory": "/home/wjq/workplace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workplace/code/bustub/src/include -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/catalog/schema.cpp.o -c /home/wjq/workplace/code/bustub/src/catalog/schema.cpp",
+  "file": "/home/wjq/workplace/code/bustub/src/catalog/schema.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/catalog/schema.cpp.o"
+},
+{
+  "directory": "/home/wjq/workplace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workplace/code/bustub/src/include -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.o -c /home/wjq/workplace/code/bustub/src/storage/table/tuple.cpp",
+  "file": "/home/wjq/workplace/code/bustub/src/storage/table/tuple.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.o"
+},
+{
+  "directory": "/home/wjq/workplace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workplace/code/bustub/src/include -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.o -c /home/wjq/workplace/code/bustub/src/storage/table/table_page.cpp",
+  "file": "/home/wjq/workplace/code/bustub/src/storage/table/table_page.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.o"
+},
+{
   "directory": "/home/wjq/workplace/code/bustub/build/test",
   "command": "/usr/bin/c++  -I/home/wjq/workplace/code/bustub/src/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/lru_k_replacer_benchmark.dir/buffer/lru_k_replacer_benchmark.cpp.o -c /home/wjq/workplace/code/bustub/test/buffer/lru_k_replacer_benchmark.cpp",
   "file": "/home/wjq/workplace/code/bustub/test/buffer/lru_k_replacer_benchmark.cpp",
@@ -94,5 +118,11 @@
   "command": "/usr/bin/c++  -I/home/wjq/workplace/code/bustub/src/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/type_system_benchmark.dir/type/type_system_benchmark.cpp.o -c /home/wjq/workplace/code/bustub/test/type/type_system_benchmark.cpp",
   "file": "/home/wjq/workplace/code/bustub/test/type/type_system_benchmark.cpp",
   "output": "test/CMakeFiles/type_system_benchmark.dir/type/type_system_benchmark.cpp.o"
+},
+{
+  "directory": "/home/wjq/workplace/code/bustub/build/test",
+  "command": "/usr/bin/c++  -I/home/wjq/workplace/code/bustub/src/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest/include -isystem /home/wjq/workplace/code/bustub/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/table_page_benchmark.dir/storage/table/table_page_benchmark.cpp.o -c /home/wjq/workplace/code/bustub/test/storage/table/table_page_benchmark.cpp",
+  "file": "/home/wjq/workplace/code/bustub/test/storage/table/table_page_benchmark.cpp",
+  "output": "test/CMakeFiles/table_page_benchmark.dir/storage/table/table_page_benchmark.cpp.o"
 }
 ]

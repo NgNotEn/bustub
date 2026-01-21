@@ -93,4 +93,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "test/CMakeFiles/disk_scheduler_benchmark.dir/DependInfo.cmake"
   "test/CMakeFiles/buffer_pool_benchmark.dir/DependInfo.cmake"
   "test/CMakeFiles/type_system_benchmark.dir/DependInfo.cmake"
+  "test/CMakeFiles/table_page_benchmark.dir/DependInfo.cmake"
   )

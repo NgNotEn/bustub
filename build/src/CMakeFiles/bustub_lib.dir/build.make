@@ -181,6 +181,62 @@ src/CMakeFiles/bustub_lib.dir/type/varlen_type.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bustub_lib.dir/type/varlen_type.cpp.s"
 	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wjq/workplace/code/bustub/src/type/varlen_type.cpp -o CMakeFiles/bustub_lib.dir/type/varlen_type.cpp.s
 
+src/CMakeFiles/bustub_lib.dir/catalog/column.cpp.o: src/CMakeFiles/bustub_lib.dir/flags.make
+src/CMakeFiles/bustub_lib.dir/catalog/column.cpp.o: /home/wjq/workplace/code/bustub/src/catalog/column.cpp
+src/CMakeFiles/bustub_lib.dir/catalog/column.cpp.o: src/CMakeFiles/bustub_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wjq/workplace/code/bustub/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/bustub_lib.dir/catalog/column.cpp.o"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/bustub_lib.dir/catalog/column.cpp.o -MF CMakeFiles/bustub_lib.dir/catalog/column.cpp.o.d -o CMakeFiles/bustub_lib.dir/catalog/column.cpp.o -c /home/wjq/workplace/code/bustub/src/catalog/column.cpp
+
+src/CMakeFiles/bustub_lib.dir/catalog/column.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bustub_lib.dir/catalog/column.cpp.i"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wjq/workplace/code/bustub/src/catalog/column.cpp > CMakeFiles/bustub_lib.dir/catalog/column.cpp.i
+
+src/CMakeFiles/bustub_lib.dir/catalog/column.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bustub_lib.dir/catalog/column.cpp.s"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wjq/workplace/code/bustub/src/catalog/column.cpp -o CMakeFiles/bustub_lib.dir/catalog/column.cpp.s
+
+src/CMakeFiles/bustub_lib.dir/catalog/schema.cpp.o: src/CMakeFiles/bustub_lib.dir/flags.make
+src/CMakeFiles/bustub_lib.dir/catalog/schema.cpp.o: /home/wjq/workplace/code/bustub/src/catalog/schema.cpp
+src/CMakeFiles/bustub_lib.dir/catalog/schema.cpp.o: src/CMakeFiles/bustub_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wjq/workplace/code/bustub/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/bustub_lib.dir/catalog/schema.cpp.o"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/bustub_lib.dir/catalog/schema.cpp.o -MF CMakeFiles/bustub_lib.dir/catalog/schema.cpp.o.d -o CMakeFiles/bustub_lib.dir/catalog/schema.cpp.o -c /home/wjq/workplace/code/bustub/src/catalog/schema.cpp
+
+src/CMakeFiles/bustub_lib.dir/catalog/schema.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bustub_lib.dir/catalog/schema.cpp.i"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wjq/workplace/code/bustub/src/catalog/schema.cpp > CMakeFiles/bustub_lib.dir/catalog/schema.cpp.i
+
+src/CMakeFiles/bustub_lib.dir/catalog/schema.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bustub_lib.dir/catalog/schema.cpp.s"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wjq/workplace/code/bustub/src/catalog/schema.cpp -o CMakeFiles/bustub_lib.dir/catalog/schema.cpp.s
+
+src/CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.o: src/CMakeFiles/bustub_lib.dir/flags.make
+src/CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.o: /home/wjq/workplace/code/bustub/src/storage/table/tuple.cpp
+src/CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.o: src/CMakeFiles/bustub_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wjq/workplace/code/bustub/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.o"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.o -MF CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.o.d -o CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.o -c /home/wjq/workplace/code/bustub/src/storage/table/tuple.cpp
+
+src/CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.i"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wjq/workplace/code/bustub/src/storage/table/tuple.cpp > CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.i
+
+src/CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.s"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wjq/workplace/code/bustub/src/storage/table/tuple.cpp -o CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.s
+
+src/CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.o: src/CMakeFiles/bustub_lib.dir/flags.make
+src/CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.o: /home/wjq/workplace/code/bustub/src/storage/table/table_page.cpp
+src/CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.o: src/CMakeFiles/bustub_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wjq/workplace/code/bustub/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.o"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.o -MF CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.o.d -o CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.o -c /home/wjq/workplace/code/bustub/src/storage/table/table_page.cpp
+
+src/CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.i"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wjq/workplace/code/bustub/src/storage/table/table_page.cpp > CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.i
+
+src/CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.s"
+	cd /home/wjq/workplace/code/bustub/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wjq/workplace/code/bustub/src/storage/table/table_page.cpp -o CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.s
+
 # Object files for target bustub_lib
 bustub_lib_OBJECTS = \
 "CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.o" \
@@ -190,7 +246,11 @@ bustub_lib_OBJECTS = \
 "CMakeFiles/bustub_lib.dir/type/value.cpp.o" \
 "CMakeFiles/bustub_lib.dir/type/type.cpp.o" \
 "CMakeFiles/bustub_lib.dir/type/integer_type.cpp.o" \
-"CMakeFiles/bustub_lib.dir/type/varlen_type.cpp.o"
+"CMakeFiles/bustub_lib.dir/type/varlen_type.cpp.o" \
+"CMakeFiles/bustub_lib.dir/catalog/column.cpp.o" \
+"CMakeFiles/bustub_lib.dir/catalog/schema.cpp.o" \
+"CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.o" \
+"CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.o"
 
 # External object files for target bustub_lib
 bustub_lib_EXTERNAL_OBJECTS =
@@ -203,9 +263,13 @@ lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/type/value.cpp.o
 lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/type/type.cpp.o
 lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/type/integer_type.cpp.o
 lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/type/varlen_type.cpp.o
+lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/catalog/column.cpp.o
+lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/catalog/schema.cpp.o
+lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.o
+lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.o
 lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/build.make
 lib/libbustub_lib.so: src/CMakeFiles/bustub_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/wjq/workplace/code/bustub/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library ../lib/libbustub_lib.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/wjq/workplace/code/bustub/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX shared library ../lib/libbustub_lib.so"
 	cd /home/wjq/workplace/code/bustub/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bustub_lib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
