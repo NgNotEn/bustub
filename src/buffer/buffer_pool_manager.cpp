@@ -25,6 +25,7 @@ namespace bustub {
         }
     };
     BufferPoolManager::~BufferPoolManager(){
+        FlushAllPages();
         delete [] pages_;
     }
 
@@ -37,40 +38,56 @@ namespace bustub {
 
 
     // == flush page == 
-    auto BufferPoolManager::FlushPage(page_id_t page_id) -> void{
-        if (page_id == INVALID_PAGE_ID) return;
-        
-        std::lock_guard<std::mutex> lock(latch_);
-        // find page
-        auto it = page_table_.find(page_id);
-        if(it == page_table_.end()) return;
-        frame_id_t frame_id = it->second;
-        Page* page = &pages_[frame_id];
+    auto BufferPoolManager::FlushPage(page_id_t page_id) -> void {
+        // 在锁外声明 future，以便稍后在锁外使用
+        std::future<bool> future;
+        Page* page_ptr = nullptr;
 
-        // construct promsise-futrue
-        DiskScheduler::DiskSchedulerPromise promise;
-        auto future = promise.get_future();
-        disk_scheduler_->Schedule(DiskRequest{true, page->GetData(),page_id,  std::move(promise)});
-        if(future.get()) {
-            page -> SetDirty(false);
+        { // <--- 开启一个新的作用域
+            std::lock_guard<std::mutex> lock(latch_); // 持锁开始
+
+            // 查找 Page (元数据操作，必须持锁)
+            if (page_table_.find(page_id) == page_table_.end()) {
+                return;
+            }
+            frame_id_t frame_id = page_table_[page_id];
+            page_ptr = &pages_[frame_id];
+
+            // 发起调度
+            DiskScheduler::DiskSchedulerPromise promise;
+            future = promise.get_future();
+            disk_scheduler_->Schedule({
+                /* is_write = */ true,
+                /* data     = */ page_ptr->GetData(),
+                /* page_id  = */ page_id,
+                /* callback = */ std::move(promise)  // <--- 移交所有权
+            });
+            // 更新 Dirty 标记
+            page_ptr->is_dirty_ = false;
+
+        } // <--- 作用域结束，lock 被析构，BPM 锁自动释放
+
+        // 无锁状态下等待 I/O 完成
+        if (future.valid()) {
+            future.get(); 
         }
     }
 
-    auto BufferPoolManager::FlushPageInternal(page_id_t page_id) -> void{
+    // 内部版本，调用者已持锁
+    auto BufferPoolManager::FlushPageInternal(page_id_t page_id) -> void {
         if (page_id == INVALID_PAGE_ID) return;
-        // find page
+        
         auto it = page_table_.find(page_id);
-        if(it == page_table_.end()) return;
+        if (it == page_table_.end()) return;
+        
         frame_id_t frame_id = it->second;
         Page* page = &pages_[frame_id];
 
-        // construct promsise-futrue
         DiskScheduler::DiskSchedulerPromise promise;
         auto future = promise.get_future();
-        disk_scheduler_->Schedule(DiskRequest{true, page->GetData(),page_id,  std::move(promise)});
-        if(future.get()) {
-            page -> SetDirty(false);
-        }
+        disk_scheduler_->Schedule({true, page->GetData(), page_id, std::move(promise)});
+        future.get();
+        page->is_dirty_ = false;
     }
 
     auto BufferPoolManager::FlushAllPages() -> void{

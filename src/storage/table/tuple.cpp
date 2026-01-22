@@ -68,6 +68,7 @@ namespace bustub {
     }
 
     auto Tuple::operator=(Tuple&& other) -> Tuple& {
+        if(data_ != nullptr) delete [] data_;
         is_allocated_ = other.is_allocated_;
         storage_size_ = other.storage_size_;
         rid_ = other.rid_;
@@ -87,16 +88,26 @@ namespace bustub {
         is_allocated_= other.is_allocated_;
         storage_size_ = other.storage_size_;
         rid_ = other.rid_;
-        data_ = new char[storage_size_];
-        memcpy(data_, other.data_,  storage_size_);
+        if (storage_size_ > 0 && other.data_ != nullptr) {
+            data_ = new char[storage_size_];
+            memcpy(data_, other.data_, storage_size_);
+        } else {
+            data_ = nullptr;
+        }
     }
 
     auto Tuple::operator=(const Tuple& other) -> Tuple& {
+        if(&other == this) return *this;
+        if(data_ != nullptr) delete [] data_;
         is_allocated_= other.is_allocated_;
         storage_size_ = other.storage_size_;
         rid_ = other.rid_;
-        data_ = new char[storage_size_];
-        memcpy(data_, other.data_,  storage_size_);
+        if (storage_size_ > 0 && other.data_ != nullptr) {
+            data_ = new char[storage_size_];
+            memcpy(data_, other.data_, storage_size_);
+        } else {
+            data_ = nullptr;
+        }
         return *this;
     }
 

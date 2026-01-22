@@ -73,7 +73,7 @@ namespace bustub {
 
 
         auto it = frames_.find(frame_id);
-        if(it == frames_.end()) throw Exception(ExceptionType::OUT_OF_RANGE, "Frame ID not in store.");
+        if(it == frames_.end()) return;
         // only diffent status, change cur_size
         if(it->second.is_evictable_ ^ set_evictable) {
             it->second.is_evictable_ = set_evictable;

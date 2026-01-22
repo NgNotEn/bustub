@@ -37,6 +37,21 @@ namespace bustub {
 
     auto DiskManager::ReadPage(page_id_t page_id, char* page_data) -> void {
         std::size_t offset = static_cast<std::size_t>(page_id) * PAGE_SIZE;
+
+        db_file_.seekg(0, std::ios::end);
+        std::streamsize file_size = db_file_.tellg();
+
+        // 检查是否越界
+        if (offset >= static_cast<std::size_t>(file_size)) {
+            // 抛出异常（逻辑错误）
+            throw std::runtime_error("DiskManager::ReadPage: Page ID out of bound");
+            
+            // 记录日志并返回（如果是 void 只能 log）
+            // LOG_ERROR("ReadPage out of bound: %d", page_id);
+            // return;
+        }
+
+
         db_file_.seekg(offset);
         db_file_.read(page_data, PAGE_SIZE);    // output page data to page_data
     }

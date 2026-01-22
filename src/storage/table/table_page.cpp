@@ -11,8 +11,8 @@ namespace bustub {
         return reinterpret_cast<Header*>(data_);
     }
 
-    auto TablePage::GetSlot(uint32_t slot_idx) -> Slot*{
-        return reinterpret_cast<Slot*>(data_ + sizeof(Header) + slot_idx * sizeof(Slot));
+    auto TablePage::GetSlot(uint32_t slot_id) -> Slot*{
+        return reinterpret_cast<Slot*>(data_ + sizeof(Header) + slot_id * sizeof(Slot));
     }
 
     auto TablePage::Init(page_id_t page_id, page_id_t prev_page_id, page_id_t next_page_id) -> void{
@@ -60,7 +60,7 @@ namespace bustub {
         }
     }
 
-    auto TablePage::GetTuple(RID rid) -> Tuple {
+    auto TablePage::GetTuple(const RID rid) -> Tuple {
         Header* head = GetHeader();
         if (rid.GetSlotId() >= head->tuple_count_) {
             return Tuple();
@@ -76,13 +76,16 @@ namespace bustub {
         return ret_tuple;
     }
 
-    auto TablePage::MarkDelete(RID rid) -> void {
+    // true or false not just mean to be dirty?
+    auto TablePage::MarkDeleted(const RID rid) -> bool {
         Header* head = GetHeader();
         if (rid.GetSlotId() >= head->tuple_count_) {
-            return ;
+            return false;
         }
         Slot* slot = GetSlot(rid.GetSlotId());
+        if(slot->storage_size_ == 0) return false;
         slot->storage_size_ = 0;
+        return true;
     }
 
     auto TablePage::MoveInsertTuple(const Tuple& tuple) -> uint32_t {
@@ -102,9 +105,12 @@ namespace bustub {
     }
 
 
-    auto TablePage::UpdateTuple(const Tuple& new_tuple, Tuple old_tuple, RID rid) -> bool {
+    auto TablePage::UpdateTuple(const Tuple& new_tuple, RID rid) -> bool {
+        Header* header = GetHeader();
+        if(rid.GetPageId() != page_id_ || rid.GetSlotId() >= header->tuple_count_) return false;
+        Slot* slot = GetSlot(rid.GetSlotId());
         // just memcpy
-        if(new_tuple.GetStorageSize() <= old_tuple.GetStorageSize()) {
+        if(new_tuple.GetStorageSize() <= slot->storage_size_) {
             Slot* slot = GetSlot(rid.GetSlotId());
             uint32_t offset = slot->offset_;
             memcpy(data_ + offset, new_tuple.GetData(), new_tuple.GetStorageSize());
@@ -116,7 +122,6 @@ namespace bustub {
             uint32_t offset = MoveInsertTuple(new_tuple);
             if(offset != INVALID_OFFSET) {
                 // alter slot
-                Slot* slot = GetSlot(rid.GetSlotId());
                 slot->offset_ = offset;
                 slot->storage_size_ = new_tuple.GetStorageSize();
                 return true;

@@ -1,18 +1,17 @@
 #pragma once
 
+#include "common/config.h"
 #include <cstdint>
 #include <string>
 #include <sstream>
 
 namespace bustub {
 
-// 定义 PageId 的类型，通常是 int32_t
-using page_id_t = int32_t; 
 
 class RID {
 public:
     // 默认构造函数 (初始化为无效值)
-    RID() : page_id_(-1), slot_id_(0) {}
+    RID() : page_id_(INVALID_PAGE_ID), slot_id_(0) {}
 
     // 参数构造函数
     RID(page_id_t page_id, uint32_t slot_num) 

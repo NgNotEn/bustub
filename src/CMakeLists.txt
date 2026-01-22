@@ -21,6 +21,7 @@ set(BUSTUB_SOURCES
     # storage table
     storage/table/tuple.cpp
     storage/table/table_page.cpp
+    storage/table/table_heap.cpp
 )
 
 # === 打包成库 ===

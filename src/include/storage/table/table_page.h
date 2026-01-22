@@ -1,12 +1,17 @@
 #pragma once
 
+#include "common/config.h"
 #include "common/rid.h"
 #include <cstdint>
 #include "storage/table/tuple.h"
 #include "storage/page/page.h"
 
+// This is a page_node of table heap (a delist);
+
 namespace bustub {
+    class TableHeap;
     class TablePage: public Page {
+        friend TableHeap;
         struct Header{
             page_id_t page_id_;
             page_id_t prev_page_id_;
@@ -26,14 +31,14 @@ namespace bustub {
         auto InsertTuple(const Tuple& tuple) -> RID;
         
 
-        auto GetTuple(RID rid) -> Tuple;
-        auto MarkDelete(RID rid) -> void;
-        auto UpdateTuple(const Tuple& new_tuple, Tuple old_tuple, RID rid) -> bool;
+        auto GetTuple(const RID rid) -> Tuple;
+        auto MarkDeleted(const RID rid) -> bool;
+        auto UpdateTuple(const Tuple& new_tuple, RID rid) -> bool;
     private:
         // return offset of new tuple
         auto MoveInsertTuple(const Tuple& tuple) -> uint32_t;
 
         auto GetHeader() -> Header*;
-        auto GetSlot(uint32_t slot_idx) -> Slot*;
+        auto GetSlot(uint32_t slot_id) -> Slot*;
     };
 }
