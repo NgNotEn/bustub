@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src
 
-CXX_FLAGS = -std=c++17
+CXX_FLAGS = -O3 -DNDEBUG -std=c++17
 
