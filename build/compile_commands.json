@@ -1,0 +1,146 @@
+[
+{
+  "directory": "/home/wjq/workspace/code/bustub/build",
+  "command": "/usr/bin/c++  -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -o CMakeFiles/bustub.dir/src/main/bustub.cpp.o -c /home/wjq/workspace/code/bustub/src/main/bustub.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/main/bustub.cpp",
+  "output": "CMakeFiles/bustub.dir/src/main/bustub.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.o -c /home/wjq/workspace/code/bustub/src/buffer/lru_k_replacer.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/buffer/lru_k_replacer.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/buffer/lru_k_replacer.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o -c /home/wjq/workspace/code/bustub/src/storage/disk/disk_manager.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/storage/disk/disk_manager.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/storage/disk/disk_manager.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o -c /home/wjq/workspace/code/bustub/src/buffer/buffer_pool_manager.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/buffer/buffer_pool_manager.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/buffer/buffer_pool_manager.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/type/value.cpp.o -c /home/wjq/workspace/code/bustub/src/type/value.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/type/value.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/type/value.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/type/type.cpp.o -c /home/wjq/workspace/code/bustub/src/type/type.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/type/type.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/type/type.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/type/integer_type.cpp.o -c /home/wjq/workspace/code/bustub/src/type/integer_type.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/type/integer_type.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/type/integer_type.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/type/varchar_type.cpp.o -c /home/wjq/workspace/code/bustub/src/type/varchar_type.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/type/varchar_type.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/type/varchar_type.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/catalog/column.cpp.o -c /home/wjq/workspace/code/bustub/src/catalog/column.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/catalog/column.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/catalog/column.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/catalog/schema.cpp.o -c /home/wjq/workspace/code/bustub/src/catalog/schema.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/catalog/schema.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/catalog/schema.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/catalog/catalog_meta.cpp.o -c /home/wjq/workspace/code/bustub/src/catalog/catalog_meta.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/catalog/catalog_meta.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/catalog/catalog_meta.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/catalog/table_info.cpp.o -c /home/wjq/workspace/code/bustub/src/catalog/table_info.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/catalog/table_info.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/catalog/table_info.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/catalog/catalog_manager.cpp.o -c /home/wjq/workspace/code/bustub/src/catalog/catalog_manager.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/catalog/catalog_manager.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/catalog/catalog_manager.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.o -c /home/wjq/workspace/code/bustub/src/storage/table/tuple.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/storage/table/tuple.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/storage/table/tuple.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.o -c /home/wjq/workspace/code/bustub/src/storage/table/table_page.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/storage/table/table_page.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/storage/table/table_page.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/storage/table/table_heap.cpp.o -c /home/wjq/workspace/code/bustub/src/storage/table/table_heap.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/storage/table/table_heap.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/storage/table/table_heap.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/execution/table_scan_executor.cpp.o -c /home/wjq/workspace/code/bustub/src/execution/table_scan_executor.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/execution/table_scan_executor.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/execution/table_scan_executor.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/execution/insert_executor.cpp.o -c /home/wjq/workspace/code/bustub/src/execution/insert_executor.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/execution/insert_executor.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/execution/insert_executor.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/execution/delete_executor.cpp.o -c /home/wjq/workspace/code/bustub/src/execution/delete_executor.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/execution/delete_executor.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/execution/delete_executor.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/execution/update_executor.cpp.o -c /home/wjq/workspace/code/bustub/src/execution/update_executor.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/execution/update_executor.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/execution/update_executor.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/execution/filter_executor.cpp.o -c /home/wjq/workspace/code/bustub/src/execution/filter_executor.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/execution/filter_executor.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/execution/filter_executor.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/execution/select_executor.cpp.o -c /home/wjq/workspace/code/bustub/src/execution/select_executor.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/execution/select_executor.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/execution/select_executor.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/main/sql_handlers.cpp.o -c /home/wjq/workspace/code/bustub/src/main/sql_handlers.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/main/sql_handlers.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/main/sql_handlers.cpp.o"
+},
+{
+  "directory": "/home/wjq/workspace/code/bustub/build/src",
+  "command": "/usr/bin/c++ -Dbustub_lib_EXPORTS -I/home/wjq/workspace/code/bustub/third_party/googletest/googletest/include -I/home/wjq/workspace/code/bustub/./include -I/home/wjq/workspace/code/bustub/include -I/home/wjq/workspace/code/bustub/third_party/sql-parser -I/home/wjq/workspace/code/bustub/third_party/sql-parser/src -std=c++17 -fPIC -o CMakeFiles/bustub_lib.dir/parser/sql_parser.cpp.o -c /home/wjq/workspace/code/bustub/src/parser/sql_parser.cpp",
+  "file": "/home/wjq/workspace/code/bustub/src/parser/sql_parser.cpp",
+  "output": "src/CMakeFiles/bustub_lib.dir/parser/sql_parser.cpp.o"
+}
+]

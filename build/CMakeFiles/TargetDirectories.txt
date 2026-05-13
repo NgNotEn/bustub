@@ -1,0 +1,6 @@
+/home/wjq/workspace/code/bustub/build/CMakeFiles/bustub.dir
+/home/wjq/workspace/code/bustub/build/CMakeFiles/edit_cache.dir
+/home/wjq/workspace/code/bustub/build/CMakeFiles/rebuild_cache.dir
+/home/wjq/workspace/code/bustub/build/src/CMakeFiles/bustub_lib.dir
+/home/wjq/workspace/code/bustub/build/src/CMakeFiles/edit_cache.dir
+/home/wjq/workspace/code/bustub/build/src/CMakeFiles/rebuild_cache.dir

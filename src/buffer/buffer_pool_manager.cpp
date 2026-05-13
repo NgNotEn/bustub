@@ -1,213 +1,227 @@
 #include "buffer/buffer_pool_manager.h"
+
+#include <cstddef>
+#include <mutex>
+
 #include "buffer/lru_k_replacer.h"
 #include "common/config.h"
 #include "storage/disk/disk_manager.h"
-#include "storage/disk/disk_scheduler.h"
-#include <cerrno>
-#include <cstddef>
-#include <cstdlib>
-#include <future>
-#include <mutex>
 
 namespace bustub {
 
-    // == constructor and destructor ==
-    BufferPoolManager::BufferPoolManager(std::size_t num_pages, std::size_t lru_k, const std::filesystem::path& db_file)
-    :pool_size_(num_pages) {
-        pages_ = new Page[num_pages];
-        replacer_ = std::make_unique<LRUKReplacer>(pool_size_, lru_k);
-        auto disk_manager = std::make_unique<DiskManager>(db_file);
-        next_page_id_ = disk_manager->GetNumPages();
-        disk_scheduler_ = std::make_unique<DiskScheduler>(std::move(disk_manager));
-        for (size_t i = 0; i < pool_size_; ++i) {
-            pages_[i].ResetMemory();
-            free_list_.emplace_back(static_cast<frame_id_t>(i));
-        }
-    };
-    BufferPoolManager::~BufferPoolManager(){
-        FlushAllPages();
-        delete [] pages_;
-    }
-
-    // == pin page ==
-    inline auto BufferPoolManager::PinPage(frame_id_t frame_id) -> void {
-        pages_[frame_id].Pin();
-        replacer_->RecordAccess(frame_id);
-        replacer_->SetEvictable(frame_id,  false);
-    }
-
-
-    // == flush page == 
-    auto BufferPoolManager::FlushPage(page_id_t page_id) -> void {
-        // 在锁外声明 future，以便稍后在锁外使用
-        std::future<bool> future;
-        Page* page_ptr = nullptr;
-
-        { // <--- 开启一个新的作用域
-            std::lock_guard<std::mutex> lock(latch_); // 持锁开始
-
-            // 查找 Page (元数据操作，必须持锁)
-            if (page_table_.find(page_id) == page_table_.end()) {
-                return;
-            }
-            frame_id_t frame_id = page_table_[page_id];
-            page_ptr = &pages_[frame_id];
-
-            // 发起调度
-            DiskScheduler::DiskSchedulerPromise promise;
-            future = promise.get_future();
-            disk_scheduler_->Schedule({
-                /* is_write = */ true,
-                /* data     = */ page_ptr->GetData(),
-                /* page_id  = */ page_id,
-                /* callback = */ std::move(promise)  // <--- 移交所有权
-            });
-            // 更新 Dirty 标记
-            page_ptr->is_dirty_ = false;
-
-        } // <--- 作用域结束，lock 被析构，BPM 锁自动释放
-
-        // 无锁状态下等待 I/O 完成
-        if (future.valid()) {
-            future.get(); 
-        }
-    }
-
-    // 内部版本，调用者已持锁
-    auto BufferPoolManager::FlushPageInternal(page_id_t page_id) -> void {
-        if (page_id == INVALID_PAGE_ID) return;
-        
-        auto it = page_table_.find(page_id);
-        if (it == page_table_.end()) return;
-        
-        frame_id_t frame_id = it->second;
-        Page* page = &pages_[frame_id];
-
-        DiskScheduler::DiskSchedulerPromise promise;
-        auto future = promise.get_future();
-        disk_scheduler_->Schedule({true, page->GetData(), page_id, std::move(promise)});
-        future.get();
-        page->is_dirty_ = false;
-    }
-
-    auto BufferPoolManager::FlushAllPages() -> void{
-        std::lock_guard<std::mutex> lock(latch_);
-        for(std::size_t i = 0; i < pool_size_; ++i) 
-            if(pages_[i].IsDirty()) FlushPageInternal(pages_[i].GetPageId());
-    }
-
-
-    // == new page for expand the dataset ==
-    auto BufferPoolManager::NewPage() ->Page* {
-        std::lock_guard<std::mutex> lock(latch_);
-        Page* page = nullptr;
-        frame_id_t frame_id;
-
-        // has free frame
-        if(!free_list_.empty()) {
-            frame_id = free_list_.front();
-            free_list_.pop_front();
-            page = &pages_[frame_id];
-        }
-        // need vict
-        else {
-            if(!replacer_->Evict(&frame_id)) return nullptr;
-            page = &pages_[frame_id];
-            if(page->IsDirty()) FlushPageInternal(page->page_id_);
-            page_table_.erase(page->page_id_);
-            page->ResetMemory();
-        }
-        // end to init
-        if(page) {
-            page->SetId(next_page_id_++);
-            PinPage(frame_id);
-            page_table_[page->page_id_] = frame_id;
-        }
-        return page;
-    }
-
-    // == delete page ==
-    auto BufferPoolManager::DeletePage(page_id_t page_id) -> bool{
-        std::lock_guard<std::mutex> lock(latch_);
-
-        // find page
-        auto it = page_table_.find(page_id);
-        if(it == page_table_.end()) return true;
-        frame_id_t frame_id = it->second;
-        Page* page = &pages_[frame_id];
-
-        // check status
-        if(page->GetPinCount()) return false;
-
-        // return frame, clear replacer's record, erase hash table
-        free_list_.push_back((frame_id));
-        replacer_->Remove(frame_id);
-        page_table_.erase(page->GetPageId());
-        page->ResetMemory();
-        return true;
-    }
-
-
-    // == fetch page ==
-    auto BufferPoolManager::FetchPage(page_id_t page_id) -> Page* {
-        std::lock_guard<std::mutex> lock(latch_);
-
-        // find
-        auto it = page_table_.find(page_id);
-        frame_id_t frame_id;
-        Page* page = nullptr;
-
-        // exist in memory
-        if(it != page_table_.end()) {
-            PinPage(it->second);
-            return &pages_[it->second];
-        }
-
-        // on disk
-        // get frame and new page
-        if(!free_list_.empty()) {
-            frame_id = free_list_.front();
-            free_list_.pop_front();
-            page = &pages_[frame_id];
-        } else {
-            if(replacer_->Evict(&frame_id)) {
-                page = &pages_[frame_id];
-                if(page->IsDirty()) FlushPageInternal(page->GetPageId());
-                page_table_.erase(page->page_id_);
-                page->ResetMemory();
-            }
-            else return nullptr;
-        }
-        page->SetId(page_id);
-        page_table_[page_id] = frame_id;
-        // read from disk
-        DiskScheduler::DiskSchedulerPromise promise;
-        auto future = promise.get_future();
-        disk_scheduler_->Schedule({false, page->GetData(), page_id, std::move(promise)});
-        if(future.get()) {
-            PinPage(frame_id);
-            return page;
-        }
-        return nullptr;
-    }
-
-    auto BufferPoolManager::UnpinPage(page_id_t page_id, bool is_dirty) -> void {
-        std::lock_guard<std::mutex> lock(latch_);
-
-        auto it = page_table_.find(page_id);
-        frame_id_t frame_id;
-        Page* page = nullptr;
-
-        // exist in memory
-        if(it != page_table_.end()) {
-            frame_id = it->second;
-            page =  &pages_[frame_id];
-            if(page->pin_count_ > 0) page->Unpin();
-            else return;
-            if(is_dirty) page->SetDirty(true);
-            if(!page->pin_count_) {
-                replacer_->SetEvictable(frame_id, true);
-            } 
-        }
-    }
+BufferPoolManager::BufferPoolManager(std::size_t num_pages, std::size_t lru_k,
+                                     DiskManager* disk_manager)
+  : pool_size_(num_pages), disk_manager_(disk_manager) {
+  pages_ = new Page[num_pages];
+  replacer_ = std::make_unique<LRUKReplacer>(pool_size_, lru_k);
+  for (size_t i = 0; i < pool_size_; ++i) {
+    pages_[i].ResetMemory();
+    free_list_.emplace_back(static_cast<frame_id_t>(i));
+  }
 }
+
+BufferPoolManager::~BufferPoolManager() {
+  FlushAllPages();
+  delete[] pages_;
+}
+
+inline auto BufferPoolManager::PinPage(frame_id_t frame_id) -> void {
+  pages_[frame_id].Pin();
+  replacer_->RecordAccess(frame_id);
+  replacer_->SetEvictable(frame_id, false);
+}
+
+auto BufferPoolManager::FetchPage(table_id_t table_id,
+                                  page_id_t page_id) -> Page* {
+  std::lock_guard<std::mutex> lock(latch_);
+
+  PageKey key{table_id, page_id};
+
+  // Check if already in memory
+  auto it = page_table_.find(key);
+  frame_id_t frame_id;
+  Page* page = nullptr;
+
+  if (it != page_table_.end()) {
+    // Already in buffer
+    PinPage(it->second);
+    return &pages_[it->second];
+  }
+
+  // Need to load from disk
+  if (!free_list_.empty()) {
+    frame_id = free_list_.front();
+    free_list_.pop_front();
+    page = &pages_[frame_id];
+  } else {
+    if (!replacer_->Evict(&frame_id)) return nullptr;
+    page = &pages_[frame_id];
+    if (page->IsDirty()) {
+      // Find old key and flush
+      for (auto& [old_key, old_frame_id] : page_table_) {
+        if (old_frame_id == frame_id) {
+          FlushPageInternal(old_key);
+          page_table_.erase(old_key);
+          break;
+        }
+      }
+    }
+    page->ResetMemory();
+  }
+
+  // Load from disk
+  page->SetId(page_id);
+  page_table_[key] = frame_id;
+  try {
+    disk_manager_->ReadPage(table_id, page_id, page->GetData());
+    PinPage(frame_id);
+    return page;
+  } catch (...) {
+    return nullptr;
+  }
+}
+
+auto BufferPoolManager::FlushPage(table_id_t table_id,
+                                  page_id_t page_id) -> void {
+  std::lock_guard<std::mutex> lock(latch_);
+
+  PageKey key{table_id, page_id};
+  auto it = page_table_.find(key);
+  if (it == page_table_.end()) {
+    return;
+  }
+
+  frame_id_t frame_id = it->second;
+  Page* page = &pages_[frame_id];
+
+  try {
+    disk_manager_->WritePage(table_id, page_id, page->GetData());
+    page->is_dirty_ = false;
+  } catch (...) {
+    // Ignore errors for now
+  }
+}
+
+auto BufferPoolManager::FlushPageInternal(const PageKey& page_key) -> void {
+  auto it = page_table_.find(page_key);
+  if (it == page_table_.end()) {
+    return;
+  }
+
+  frame_id_t frame_id = it->second;
+  Page* page = &pages_[frame_id];
+
+  try {
+    disk_manager_->WritePage(page_key.table_id, page_key.page_id,
+                             page->GetData());
+    page->is_dirty_ = false;
+  } catch (...) {
+    // Ignore errors
+  }
+}
+
+auto BufferPoolManager::UnpinPage(table_id_t table_id, page_id_t page_id,
+                                  bool is_dirty) -> void {
+  std::lock_guard<std::mutex> lock(latch_);
+
+  PageKey key{table_id, page_id};
+  auto it = page_table_.find(key);
+  if (it == page_table_.end()) {
+    return;
+  }
+
+  frame_id_t frame_id = it->second;
+  Page* page = &pages_[frame_id];
+
+  if (page->GetPinCount() > 0) {
+    page->Unpin();
+  }
+
+  if (is_dirty) {
+    page->SetDirty(true);
+  }
+
+  if (page->GetPinCount() == 0) {
+    replacer_->SetEvictable(frame_id, true);
+  }
+}
+
+auto BufferPoolManager::FlushAllPages() -> void {
+  std::lock_guard<std::mutex> lock(latch_);
+  for (auto& [key, frame_id] : page_table_) {
+    Page* page = &pages_[frame_id];
+    if (page->IsDirty()) {
+      FlushPageInternal(key);
+    }
+  }
+}
+
+auto BufferPoolManager::NewPage(table_id_t table_id,
+                                page_id_t* page_id) -> Page* {
+  std::lock_guard<std::mutex> lock(latch_);
+
+  // Get next page id for this table
+  if (table_next_page_id_.find(table_id) == table_next_page_id_.end()) {
+    table_next_page_id_[table_id] = 0;
+  }
+
+  page_id_t new_page_id = table_next_page_id_[table_id]++;
+  PageKey key{table_id, new_page_id};
+
+  Page* page = nullptr;
+  frame_id_t frame_id;
+
+  // Get free frame
+  if (!free_list_.empty()) {
+    frame_id = free_list_.front();
+    free_list_.pop_front();
+    page = &pages_[frame_id];
+  } else {
+    if (!replacer_->Evict(&frame_id)) return nullptr;
+    page = &pages_[frame_id];
+    if (page->IsDirty()) {
+      for (auto& [old_key, old_frame_id] : page_table_) {
+        if (old_frame_id == frame_id) {
+          FlushPageInternal(old_key);
+          page_table_.erase(old_key);
+          break;
+        }
+      }
+    }
+    page->ResetMemory();
+  }
+
+  // Initialize new page
+  page->SetId(new_page_id);
+  page_table_[key] = frame_id;
+  PinPage(frame_id);
+
+  *page_id = new_page_id;
+  return page;
+}
+
+auto BufferPoolManager::DeletePage(table_id_t table_id,
+                                   page_id_t page_id) -> bool {
+  std::lock_guard<std::mutex> lock(latch_);
+
+  PageKey key{table_id, page_id};
+  auto it = page_table_.find(key);
+  if (it == page_table_.end()) {
+    return true;
+  }
+
+  frame_id_t frame_id = it->second;
+  Page* page = &pages_[frame_id];
+
+  if (page->GetPinCount() > 0) {
+    return false;
+  }
+
+  free_list_.push_back(frame_id);
+  replacer_->Remove(frame_id);
+  page_table_.erase(key);
+  page->ResetMemory();
+  return true;
+}
+
+}  // namespace bustub

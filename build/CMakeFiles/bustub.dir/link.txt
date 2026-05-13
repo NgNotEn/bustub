@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/bustub.dir/src/main/bustub.cpp.o -o bin/bustub   -L/home/wjq/workspace/code/bustub/third_party/sql-parser  -Wl,-rpath,/home/wjq/workspace/code/bustub/build/lib:/home/wjq/workspace/code/bustub/third_party/sql-parser lib/libbustub_lib.so -lsqlparser 

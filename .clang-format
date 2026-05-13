@@ -1,0 +1,12 @@
+---
+BasedOnStyle: Google
+IndentWidth: 2
+AccessModifierOffset: -1
+NamespaceIndentation: Inner
+PointerAlignment: Left
+ReferenceAlignment: Left
+BreakBeforeBraces: Attach
+AllowShortFunctionsOnASingleLine: Inline
+ConstructorInitializerIndentWidth: 2
+FixNamespaceComments: true
+DerivePointerAlignment: false
